@@ -53,6 +53,7 @@
 
 > ### 1.index페이지
 ![인덱스](https://github.com/focandlol/gathering/assets/50188319/9cd92420-161a-46df-9832-5c81d9c57e26)  
+#### 카테고리별 모임 게시글 이동, 최신 순으로 모임 노출 및 바로가기 
 ------------------
 </br></br></br>
 
