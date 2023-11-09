@@ -1,40 +1,20 @@
-# Specification
+# 개요
 
-A compliant README must satisfy all the requirements listed below.
+> 세모는 모임을 운영하고자 하는 사용자들과 모임에 참여하고자 하는 사용자들을 대상으로 하는 웹 어플리케이션 입니다.
 
-> Note: Standard Readme is designed for open source libraries. Although it's [historically](README.md#background) made for Node and npm projects, it also applies to libraries in other languages and package managers.
+# 목적
+```
+최근 코로나19가 종식되고 모임이 활성화됨에 따라 사용자들이 더 쉽게 모임을 생성 및 참여할 수 있게 도와주고자 함
 
-**Requirements:**
-  - Be called README.md (with capitalization).
-  - If the project supports i18n, the file must be named accordingly: `README.de.md`, where `de` is the BCP 47 Language tag. For naming, prioritize non-regional subtags for languages. If there is only one README and the language is not English, then a different language in the text is permissible without needing to specify the BCP tag: e.g., `README.md` can be in German if there is no `README.md` in another language. Where there are multiple languages, `README.md` is reserved for English.
-  - Be a valid Markdown file.
-  - Sections must appear in order given below. Optional sections may be omitted.
-  - Sections must have the titles listed below, unless otherwise specified. If the README is in another language, the titles must be translated into that language.
-  - Must not contain broken links.
-  - If there are code examples, they should be linted in the same way as the code is linted in the rest of the project.
+회원 가입 및 로그인, 프로필, 번개 모임 게시글 및 동호회 생성 및 참여, 채팅방, 번개 게시판, 동호회 게시판 등의 기능을 구현하여
+사용자들이 효율적으로 모임을 생성 및 운영하고 참여할 수 있는 환경을 제공하는 것을 목표로 함.
 
-## Table of Contents
+또한 매너등급 시스템, 호스트의 초대를 통한 참여 기능과 피드백 기능을 통해 모임이 파투 날 확률을 줄이고 사용자에게 깨끗한 모임 환경을 제공.
+```
 
-_Note: This is only a navigation guide for the specification, and does not define or mandate terms for any specification-compliant documents._
+#구성
 
-- [Sections](#sections)
-  - [Title](#title)
-  - [Banner](#banner)
-  - [Badges](#badges)
-  - [Short Description](#short-description)
-  - [Long Description](#long-description)
-  - [Table of Contents](#table-of-contents-1)
-  - [Security](#security)
-  - [Background](#background)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Extra Sections](#extra-sections)
-  - [API](#api)
-  - [Maintainers](#maintainers)
-  - [Thanks](#thanks)
-  - [Contributing](#contributing)
-  - [License](#license)
-- [Definitions](#definitions)
+
 
 ## Sections
 
