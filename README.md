@@ -140,7 +140,9 @@
 </br></br></br>
 
 > ### 14. 반응형 모바일 웹
-![모바일](https://github.com/focandlol/gathering/assets/50188319/679a8990-d9f6-4f24-b321-92d0189bf9af)
+![모바일](https://github.com/focandlol/gathering/assets/50188319/c87d3706-1527-4f51-9695-a81b924c5de0)
+
+
 ![모동](https://github.com/focandlol/gathering/assets/50188319/e0add2fc-e68e-40f1-ae39-3afb86a9b075)
 #### 모바일에서 이용 가능
 ------------------
