@@ -35,18 +35,44 @@
 
 
 # 구성
-![인덱스](https://github.com/focandlol/gathering/assets/50188319/9cd92420-161a-46df-9832-5c81d9c57e26)
 
+> ### 1.index페이지
+![인덱스](https://github.com/focandlol/gathering/assets/50188319/9cd92420-161a-46df-9832-5c81d9c57e26)  
+
+</br></br></br>
+
+> ### 2. 회원가입
 ![회가](https://github.com/focandlol/gathering/assets/50188319/b1925fe2-53bc-4267-be82-100adb90e64a)
 ![gmail](https://github.com/focandlol/gathering/assets/50188319/460d0b6e-e935-4551-88ce-7bad71143842)
+#### Java Mail Sender를 이용한 이메일 인증, 카카오 주소 api를 이용한 주소 찾기 기능
 
+</br></br></br>
+
+> ### 3. 프로필
 ![프로필](https://github.com/focandlol/gathering/assets/50188319/eb1637fe-1392-4590-b501-76b34191e8f0)
+#### 매너 점수 확인 및 프로필 이미지 변경 기능
+#### 현재 참가중인 번개 모임, 동호회 확인 및 즉시 이동
 
+</br></br></br>
+
+> ### 4. 번개 게시판
 ![번개 게시판](https://github.com/focandlol/gathering/assets/50188319/4ef8c0af-3dcf-4aba-a313-0984044ca04a)
+#### 번개 모임을 위한 게시판
+#### 게시글 검색 기능 및 페이징
 
+</br></br></br>
+
+> ### 5. 번개 게시글
 ![번개 내부](https://github.com/focandlol/gathering/assets/50188319/73e86dc0-4fc3-4bf9-a81b-560de97206a5)
+#### 회원 관리, 댓글을 통한 가입 요청 및 신청자 프로필 확인 후 초대
+#### kakao map api를 이용하여 모임 위치 지도에 마킹
 
+</br></br></br>
+
+> ### 6. 번개 모임 채팅방
 ![채팅방](https://github.com/focandlol/gathering/assets/50188319/d7c5b3d5-d8db-4e9b-963f-bed488a86d0b)
+#### Spring websocket, socketjs를 활용한 모임 참가자들 간 채팅방
+
 
 **Requirements:**
 - Title must match repository, folder and package manager names - or it may have another, relevant title with the repository, folder, and package manager title next to it in italics and in parentheses. For instance:
