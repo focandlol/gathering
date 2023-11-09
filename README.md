@@ -139,6 +139,12 @@
 ------------------
 </br></br></br>
 
+> ### 14. 반응형 모바일 웹
+![모바일](https://github.com/focandlol/gathering/assets/50188319/679a8990-d9f6-4f24-b321-92d0189bf9af)
+#### 모바일에서 이용 가능
+------------------
+</br></br></br>
+
 # 프로젝트 아키텍처
 ![프로젝트 아키텍처](https://github.com/focandlol/gathering/assets/50188319/1fcdd3a9-3fe4-4db3-91ec-e03383d71356)
 ------------------
