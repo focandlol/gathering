@@ -15,6 +15,9 @@
 # 구성
 ![구성1](https://github.com/focandlol/gathering/assets/50188319/3950de9b-26bd-4864-8ce2-65a949f70eef)
 
+![구성2](https://github.com/focandlol/gathering/assets/50188319/ac8888d7-45d1-4a34-b3db-8009b74cd05d)
+
+
 
 ## Sections
 
