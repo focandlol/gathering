@@ -38,14 +38,14 @@
 
 > ### 1.index페이지
 ![인덱스](https://github.com/focandlol/gathering/assets/50188319/9cd92420-161a-46df-9832-5c81d9c57e26)  
-
+------------------
 </br></br></br>
 
 > ### 2. 회원가입
 ![회가](https://github.com/focandlol/gathering/assets/50188319/b1925fe2-53bc-4267-be82-100adb90e64a)
 ![gmail](https://github.com/focandlol/gathering/assets/50188319/460d0b6e-e935-4551-88ce-7bad71143842)
 #### Java Mail Sender를 이용한 이메일 인증, 카카오 주소 api를 이용한 주소 찾기 기능
-
+------------------
 </br></br></br>
 
 > ### 3. 프로필
@@ -53,14 +53,14 @@
 #### CRUD
 #### 매너 점수 확인 및 프로필 이미지 변경 기능
 #### 현재 참가중인 번개 모임, 동호회 확인 및 즉시 이동
-
+------------------
 </br></br></br>
 
 > ### 4. 번개 게시판
 ![번개 게시판](https://github.com/focandlol/gathering/assets/50188319/4ef8c0af-3dcf-4aba-a313-0984044ca04a)
 #### 번개 모임을 위한 게시판
 #### 게시글 검색 기능 및 페이징
-
+------------------
 </br></br></br>
 
 > ### 5. 번개 게시글
@@ -68,62 +68,65 @@
 #### CRUD
 #### 회원 관리, 댓글을 통한 가입 요청 및 신청자 프로필에서 매너 점수 확인 후 초대
 #### kakao map api를 이용하여 모임 위치 지도에 마킹
-
+------------------
 </br></br></br>
 
 > ### 6. 번개 모임 채팅방
 ![채팅방](https://github.com/focandlol/gathering/assets/50188319/d7c5b3d5-d8db-4e9b-963f-bed488a86d0b)
 #### Spring websocket, socketjs를 활용한 모임 참가자들 간 채팅방
-
+------------------
 </br></br></br>
 
 > ### 7. 피드백
 ![피드백](https://github.com/focandlol/gathering/assets/50188319/b891ab67-b4fd-40c0-8c35-322ade5ccd1b)
 #### 모임 종료 후 불참 및 불량 인원 신고
 #### 관리자 확인 후 신고 인원 매너 점수 하락
-
+------------------
 </br></br></br>
 
 > ### 8. 동호회 게시판 
 ![동호회 외부](https://github.com/focandlol/gathering/assets/50188319/1dd73cc9-b534-4389-9087-270f04c35397)
 #### 동호회를 위한 게시판
 #### 게시글 검색 기능 및 페이징
-
+------------------
 </br></br></br>
 
 > ### 9. 동호회 게시글 
 ![동호회 내부](https://github.com/focandlol/gathering/assets/50188319/2bcccee1-ebbc-4c66-ab0e-7d2c216eaa44)
 #### CRUD
 #### 회원 관리 기능
-
+------------------
 </br></br></br>
 
 > ### 10. 동호회 가입 신청 페이지
 ![가입 신청](https://github.com/focandlol/gathering/assets/50188319/cb63c9fe-311d-4757-90a5-5d8db0969dcf)
 #### 가입 요청 및 신청자 프로필에서 매너 점수 확인 후 초대
-
+------------------
 </br></br></br>
 
 > ### 11. 동호회 공지사항 페이지
 ![공지사항](https://github.com/focandlol/gathering/assets/50188319/755e65e9-cb34-4091-b8ce-23bdd417b03d)
 #### CRUD
 #### 알림사항 및 중요사항 작성
-
+------------------
 </br></br></br>
 
 > ### 12. 동호회 채팅
 ![동호회 채팅](https://github.com/focandlol/gathering/assets/50188319/2e970005-c7d8-4eb7-bdcd-3175cd8bc408)
 #### Spring websocket, socketjs를 활용한 모임 참가자들 간 채팅방
-
+------------------
 </br></br></br>
 
 > ### 13. 동호회 앨범
 ![앨범](https://github.com/focandlol/gathering/assets/50188319/398bb700-d67a-4786-8f27-4c18a8b2cb94)
 #### Querydsl, ajax를 활용한 무한 스크롤 앨범 페이지
 #### no-offset 방식 사용
+------------------
+</br></br></br>
 
-# 구성
-
+# 프로젝트 아키텍처
+![프로젝트 아키텍처](https://github.com/focandlol/gathering/assets/50188319/1fcdd3a9-3fe4-4db3-91ec-e03383d71356)
+------------------
   ```markdown
   # Standard Readme Style _(standard-readme)_
   ```
