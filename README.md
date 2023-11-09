@@ -109,6 +109,10 @@
 #### CRUD
 #### 알림사항 및 중요사항 작성
 
+![동호회 채팅](https://github.com/focandlol/gathering/assets/50188319/2e970005-c7d8-4eb7-bdcd-3175cd8bc408)
+
+
+
 **Requirements:**
 - Title must match repository, folder and package manager names - or it may have another, relevant title with the repository, folder, and package manager title next to it in italics and in parentheses. For instance:
 
