@@ -82,6 +82,8 @@
 
 ![동호회 외부](https://github.com/focandlol/gathering/assets/50188319/1dd73cc9-b534-4389-9087-270f04c35397)
 
+![동호회 내부](https://github.com/focandlol/gathering/assets/50188319/2bcccee1-ebbc-4c66-ab0e-7d2c216eaa44)
+
 **Requirements:**
 - Title must match repository, folder and package manager names - or it may have another, relevant title with the repository, folder, and package manager title next to it in italics and in parentheses. For instance:
 
