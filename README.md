@@ -11,24 +11,25 @@
 
 또한 매너등급 시스템, 호스트의 초대를 통한 참여 기능과 피드백 기능을 통해 모임이 파투 날 확률을 줄이고 사용자에게 깨끗한 모임 환경을 제공.
 ```
-<span style="background-color: #f6f8fa">회색형광펜</span>
+
 
 # 구성
 ### 사용자 기능
-<span style="color:red"> red </span>
+
+> ##### 1.메인페이지
 
 ![메인](https://github.com/focandlol/gathering/assets/50188319/d5e1dfdd-d486-40f2-9d82-1a6ee0553f92)
 ------------------
-##### 2.번게 게시판
+> ##### 2.번게 게시판
 
 ![번개1](https://github.com/focandlol/gathering/assets/50188319/a9eb03cc-4826-49dc-99e5-0c5b02377daa)
 ![번개](https://github.com/focandlol/gathering/assets/50188319/9606e337-7117-421a-86b4-4a858731b905)
 ------------------
-##### 3.동호회 게시판
+> ##### 3.동호회 게시판
 ![동호회](https://github.com/focandlol/gathering/assets/50188319/506be925-a811-43bb-99b5-600887d6d8cf)
 ------------------
 ### 관리자 기능
-##### 1.관리자 페이지
+> ##### 1.관리자 페이지
 ![구성3](https://github.com/focandlol/gathering/assets/50188319/764dc9a4-fbb3-4b7f-a3c7-790b6d0c372f)
 
 
