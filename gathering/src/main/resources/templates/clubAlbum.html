@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, user-scalable=no">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/vendor.css?afterfsdf">
+    <link rel="stylesheet" type="text/css" href="/css/indexstyle.css?aftersdf">
+    <link rel="stylesheet" type="text/css" href="/css/mainform.css">
+    <link rel="stylesheet" type="text/css" href="/css/clubalbum.css">
+    <link rel="stylesheet" type="text/css" href="/css/mo/indexstyle_m.css?aftersdf">
+    <link rel="stylesheet" type="text/css" href="/css/mo/clubalbum_m.css">
+</head>
+<body>
+<div th:replace="~{template/side :: copyParam (${user})}"></div>
+
+<div id="clubAlbumContainer" class="container">
+    <input type="hidden" id="roomNumber" th:value="${lastAlbumId}">
+    <input type="hidden" id="roomNumber2" th:value="${clubId}">
+    <p class="mainTitle">앨범</p>
+    <div id="club_list" class="mainContentWrap">
+        <button id="add_club_btn" class="btn_10050"
+                type="button" th:onclick="|location.href='@{/club/album/add/{clubId}(clubId=${clubId})}'|">사진 올리기</button>
+
+        <div id="albumImgWrap">
+            <div class="img_back" th:each="album : ${albums}"><img th:src="|/images/${album.getStoreFile()}|"></div>
+        </div>
+    </div>
+</div> <!-- /container -->
+<script type="text/javascript">
+    //스크롤
+    let htmlAlbumWrap = document.getElementById("albumImgWrap");
+
+    let timer;
+
+    htmlAlbumWrap.addEventListener('scroll', function(){
+        if(htmlAlbumWrap.clientHeight + htmlAlbumWrap.scrollTop >= htmlAlbumWrap.scrollHeight-10){
+            if (!timer) {
+                timer = setTimeout(() => {
+                    timer = null;
+                    ajaxTest();
+                }, 50);
+            }
+        }
+    });
+
+    // ajax 통신 함수
+    function ajaxTest() {
+        let lastAlbumId = $("#roomNumber").val();
+        let number = Number(lastAlbumId);
+        let clubId = $("#roomNumber2").val();
+
+        $.ajax({
+            url : "/club/album/"+clubId,
+            type : 'post',
+            data : {num:number},
+            success : function(data) { // controllor에서 list를 return 받았음
+                for(var i=0; i<data.length; i++){
+                    hi(data[i], i);
+                }
+            },
+            error : function() {
+                alert("error");
+            }
+        });
+    }
+
+    function hi(data, i){
+        console.log("asdad");
+        let split = data.storeFile.split('|');
+
+        const newImgElement = document.createElement('img');
+        newImgElement.src = split[0];
+
+        const newDivElement = document.createElement('div');
+        newDivElement.id = "albumDivId"+data.albumId;
+        newDivElement.className = "img_back";
+
+        htmlAlbumWrap.appendChild(newDivElement);
+
+        let htmlDivElement = document.getElementById("albumDivId"+data.albumId);
+
+        let htmlImageElement = htmlDivElement.appendChild(newImgElement);
+        htmlImageElement.setAttribute("onclick","alarm("+data.albumId+")");
+
+        $("#roomNumber").val(split[1]);
+    }
+
+    function alarm(qw){
+        alert(qw);
+    }
+</script>
+<script src="/script/jquery-1.11.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<script src="/script/plugins.js"></script>
+<script src="/script/script.js"></script>
+</body>
+</html>

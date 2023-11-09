@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, user-scalable=no">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/vendor.css?afterfsdf">
+    <link rel="stylesheet" type="text/css" href="/css/indexstyle.css?aftersdf">
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script>
+        function sample6_execDaumPostcode() {
+            new daum.Postcode({
+                oncomplete: function(data) {
+                    // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+                    // 각 주소의 노출 규칙에 따라 주소를 조합한다.
+                    // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+                    var addr = ''; // 주소 변수
+                    var extraAddr = ''; // 참고항목 변수
+
+                    //사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+                    if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+                        addr = data.roadAddress;
+                    } else { // 사용자가 지번 주소를 선택했을 경우(J)
+                        addr = data.jibunAddress;
+                    }
+
+                    // 사용자가 선택한 주소가 도로명 타입일때 참고항목을 조합한다.
+                    if(data.userSelectedType === 'R'){
+                        // 법정동명이 있을 경우 추가한다. (법정리는 제외)
+                        // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
+                        if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
+                            extraAddr += data.bname;
+                        }
+                        // 건물명이 있고, 공동주택일 경우 추가한다.
+                        if(data.buildingName !== '' && data.apartment === 'Y'){
+                            extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+                        }
+                        // 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
+                        if(extraAddr !== ''){
+                            extraAddr = ' (' + extraAddr + ')';
+                        }
+                        // 조합된 참고항목을 해당 필드에 넣는다.
+                        document.getElementById("extraAddress").value = extraAddr;
+
+                    } else {
+                        document.getElementById("extraAddress").value = '';
+                    }
+
+                    // 우편번호와 주소 정보를 해당 필드에 넣는다.
+                    document.getElementById('postcode').value = data.zonecode;
+                    document.getElementById("address").value = addr;
+                    // 커서를 상세주소 필드로 이동한다.
+                    document.getElementById("detailAddress").focus();
+                }
+            }).open();
+        }
+    </script>
+    <link rel="stylesheet" href="/css/mainform.css?after">
+    <link rel="stylesheet" href="/css/forumaddform.css?after">
+    <link rel="stylesheet" type="text/css" href="/css/mo/indexstyle_m.css?aftersdf">
+    <link rel="stylesheet" href="/css/mo/forumaddform_m.css?after">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<div th:replace="~{template/side :: copyParam (${user})}"></div>
+
+<div id="ltAddContainer" class="container">
+    <p class="mainTitle">번개 게시판</p>
+    <form id="forum_add_form" th:action th:object="${ltForum}" method="post">
+
+            <div class="forum_add_div_32">
+                <p>제목</p>
+                <input type="text" id="subject" th:field="*{subject}"placeholder="제목을 입력하세요">
+                <div class="error_wrap">
+                    <div class="field-error" th:errors="*{subject}"></div>
+                </div>
+            </div>
+
+            <div class="forum_add_div_31">
+                <p>카테고리</p>
+                <select name="job" th:field="*{category}">
+                    <option th:each="cate : ${categories}" th:text="${cate.category}" th:value="${cate}">완료</option>
+                </select>
+                <div class="error_wrap">
+                    <div class="field-error" th:errors="*{category}"></div>
+                </div>
+            </div>
+
+            <div class="forum_add_div_32" id="address_div">
+                <p>주소</p>
+                <input type="text" id="postcode" th:field="*{postcode}"placeholder="우편번호">
+                <input id="find_address_btn" type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"><br>
+                <input type="text" id="address" th:field="*{address} "placeholder="주소"><br>
+                <input style="margin-bottom:0;" type="text" id="detailAddress" th:field="*{detailAddress} "placeholder="상세주소">
+                <input style="margin-bottom:0;" type="text" id="extraAddress" th:field="*{extraAddress}" placeholder="참고항목">
+                <div class="error_wrap">
+                    <div class="field-error" th:errors="*{address}"></div>
+                </div>
+            </div>
+
+            <div class="forum_add_div_31">
+                <p>정원</p>
+                <input type="text" id="num" th:field="*{num}">
+                <div class="error_wrap">
+                    <div class="field-error" th:errors="*{num}"></div>
+                </div>
+            </div>
+
+            <div class="forum_add_div_31">
+                <p>시작 시간</p>
+                <input type="text" id="startTime" th:field="*{startTime}" placeholder="시작 시간을 입력하세요">
+                <div class="error_wrap">
+                    <div class="field-error" th:errors="*{startTime}"></div>
+                </div>
+            </div>
+
+            <div class="forum_add_div_full">
+                <p>내용</p>
+                <textarea id="content" th:field="*{content}" placeholder="내용을 입력하세요"></textarea>
+                <div class="error_wrap">
+                    <div class="field-error" th:errors="*{content}"></div>
+                </div>
+            </div>
+
+        <button id="add_btn" type="submit">저장</button>
+        <div id="cancel_btn" th:onclick="|location.href='@{/ltforum}'|">취소</div>
+    </form>
+
+</div> <!-- /container -->
+<script src="/script/jquery-1.11.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<script src="/script/plugins.js"></script>
+<script src="/script/script.js"></script>
+</body>
+</html>

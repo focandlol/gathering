@@ -1,0 +1,256 @@
+@media(max-width:450px) {
+    #ltContainer{
+    width:340px;
+    height:680px;
+}
+.mainContentWrap {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px gray;
+}
+#forumWrap {
+    height:600px;
+}
+    /*ê²€ìƒ‰ì°½ ì„¤ì •*/
+#searchWrap{
+    width:320px;
+    height:40px;
+    padding:10px;
+    background-color: white;
+}
+
+#searchWrap > input{
+    width: 190px;
+    height:40px;
+    border:none;
+    padding: 0;
+    margin-left:10px;
+    float:left;
+    outline: none;
+    border-bottom: 1px solid #D2D2D2;
+    font-size:25px;
+    font-family: 'Dongle', sans-serif;
+}
+
+#searchWrap > .search_btn > img{
+    display:block;
+    width:30px;
+    height:30px;
+}
+
+#searchWrap > div > img{
+    top:50%;
+    left:50%;
+    position:relative;
+    transform: translate(-50%, -50%);
+}
+
+#searchWrap > .search_btn{
+    width: 40px;
+    height:40px;
+    float:left;
+    border:0;
+    background-color:white;
+    margin-left:10px;
+}
+    /*ê²Œì‹œê¸€ ì„¤ì •*/
+#ltForumWrap{
+    width:330px;
+    height:450px;
+    overflow:scroll;
+    -ms-overflow-style: none;
+      scrollbar-width: none;
+}
+
+#ltForumWrap::-webkit-scrollbar {
+  display: none;
+}
+
+.ltForumDiv{
+    width:310px;
+    margin-top:10px;
+    margin-bottom:10px;
+    margin-left:13px;
+    padding:3px;
+    border-radius:5px;
+    box-shadow: 1px 1px 3px gray;
+    cursor:pointer;
+    height:100px;
+}
+
+.ltForumTitle{
+    width:300px;
+    overflow: hidden;
+    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ltForumContent {
+    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+    height:20px;
+}
+.ltForumInfo {
+    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+}
+.ltForumTitle > span{
+    font-size:25px;
+}
+.ltForumContent > span{
+    font-size:19px;
+}
+.ltForumInfo > span{
+    font-size:19px;
+}
+
+.ltForumContent{
+    width:310px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+    #ltButtonWrap{
+    height:50px;
+}
+    /*íŽ˜ì´ì§€ ë¦¬ìŠ¤íŠ¸ ì„¤ì •*/
+#ltForumPageList{
+    width:200px;
+    height:50px;
+    margin-left:30px;
+    display:inline-block;
+    background-color:white;
+}
+
+.ltForumPageBtn{
+    width:20px;
+    height:50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+}
+
+#ltForumAddBtn{
+    width: 80px;
+    height: 40px;
+    padding: 0;
+    border: 0;
+    border-radius: 5px;
+    background-color: #d2d2d2;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    position: absolute;
+    bottom: 60px;
+    right: 30px;
+}
+/*ê²€ìƒ‰ ì˜µì…˜ ì„¤ì •*/
+.search_option_back{
+    width:100%;
+    height:100%;
+    background-color:rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    position:absolute;
+    top:0;
+    left:0;
+    visibility:hidden;
+    transition:all 0.5s ease-out;
+    z-index:31;
+}
+
+.search_option_back.clicked{
+    visibility:visible;
+    transition:all 0.5s ease-out;
+    opacity:1;
+}
+
+#search_option_wrap{
+    width:340px;
+    height:650px;
+    background-color:white;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+}
+
+#searchOptionOver{
+    width:330px;
+    height:650px;
+    overflow:scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#searchOptionOver::-webkit-scrollbar {
+    display: none;
+}
+
+.search_option_div{
+    margin-top:3px;
+    margin-left:10px;
+}
+
+.search_option_div > p{
+    font-size:28px;
+}
+
+#search_option_wrap input{
+    width: 300px;
+    height:40px;
+    border:none;
+    padding: 0;
+    outline: none;
+    border-bottom: 1px solid #D2D2D2;
+    font-size:20px;
+    font-family: 'Dongle', sans-serif;
+}
+
+#search_option_btn{
+    background-color:#d2d2d2;
+    width:100px;
+    height:40px;
+    border:none;
+    border-radius:5px;
+    font-size:25px;
+    font-family: 'Dongle', sans-serif;
+    padding:0;
+    display:block;
+    right:0;
+    cursor:pointer;
+    margin-top:-65px;
+    float:left;
+    margin-left:20px;
+}
+
+#search_option_back_btn{
+    background-color:#d2d2d2;
+    width:100px;
+    height:40px;
+    border:none;
+    border-radius:5px;
+    font-size:25px;
+    font-family: 'Dongle', sans-serif;
+    padding:0;
+    right:0;
+    cursor:pointer;
+    margin-top:-65px;
+    float:left;
+    margin-left:215px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#state {
+    font-size: 23px;
+}
+#state > option {
+    font-size: 23px;
+}
+}

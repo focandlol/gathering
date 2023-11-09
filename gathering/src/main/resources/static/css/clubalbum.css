@@ -1,0 +1,47 @@
+#club_list{
+    height: 740px;
+}
+
+#albumImgWrap{
+    width: 900px;
+    height: 630px;
+    margin-top: 90px;
+    margin-left: 20px;
+    position: absolute;
+    overflow:scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    font-size:0;
+}
+
+#albumImgWrap::-webkit-scrollbar {
+  display: none;
+}
+
+.img_back{
+    font-size:0;
+    letter-spacing: 0;
+    word-spacing: 0;
+    display: inline-block;
+    overflow: hidden;
+    width: 176px;
+    height: 176px;
+    background-color: aquamarine;
+}
+
+.img_back > img{
+    min-height:176px;
+    position:relative;
+    display:block;
+    object-fit: cover;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+#add_club_btn{
+    margin-top: 20px;
+    margin-right: 20px;
+    position: absolute;
+    border-radius:5px;
+}

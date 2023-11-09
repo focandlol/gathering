@@ -1,0 +1,61 @@
+@media(max-width:450px) {
+#clubAppContainer {
+    width:350px;
+    height:750px;
+}
+#application_back {
+    height:670px;
+}
+#profile_content span{
+    display:inline-block;
+    margin-top:30px;
+    margin-left:20px;
+    font-size:17px;
+}
+
+table{
+    width: 300px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #D2D2D2;
+    margin: 0 auto;
+    position: absolute;
+    transform: translate(-50%, 0);
+    left: 50%;
+    top: 105px;
+}
+
+tbody{
+    min-height:30px;
+}
+
+th{
+    height:50px;
+    text-align: center;
+}
+
+td{
+    border-top:1px solid #D2D2D2;
+    height:50px;
+}
+
+.profile_img{
+    width:50px;
+    height:50px;
+    display: block;
+}
+
+#register_btn{
+    margin-right: 20px;
+    position: absolute;
+    bottom: 30px;
+    right:210px;
+}
+
+#back_btn{
+    margin-right: 20px;
+    position: absolute;
+    bottom: 30px;
+}
+
+}

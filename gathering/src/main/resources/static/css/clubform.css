@@ -1,0 +1,173 @@
+/*메인 컨테이너 설정*/
+#clubContainer{
+    height:800px;
+}
+/*---------------------------------------------*/
+
+
+.clubDiv{
+    float: left;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 15px;
+    font-family: 'Dongle';
+    font-size: 25px;
+    line-height: 25px;
+}
+
+.clubDivP{
+    width:200px;
+    margin: 5px auto 0;
+    text-align: center;
+}
+
+.img_back{
+    border-radius: 5px;
+    overflow: hidden;
+    width:200px;
+    height:300px;
+    background-color: aquamarine;
+    box-shadow:1px 1px 5px gray;
+}
+
+.img_back > img{
+    position:relative;
+    display:block;
+    object-fit: cover;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/*버튼 랩 설정*/
+#clubButtonWrap{
+    position: absolute;
+    bottom: 0px;
+    height: 50px;
+    margin: 0;
+}
+
+#clubButtonWrap > *{
+    float:left;
+}
+/*---------------------------------------------*/
+
+
+/*페이지 리스트 설정*/
+#clubPageList{
+    width:200px;
+    height:50px;
+    margin-left:30px;
+    display:inline-block;
+    background-color:white;
+}
+
+.clubPageBtn{
+    width:40px;
+    height:50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+}
+/*---------------------------------------------*/
+
+
+/*버튼 설정*/
+#clubAddBtn{
+    width: 80px;
+    height: 40px;
+    margin-left: 490px;
+    padding: 0;
+    border: 0;
+    border-radius: 5px;
+    background-color: #d2d2d2;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#clubSearchBtn{
+    width:80px;
+    height:40px;
+    margin-left:20px;
+    padding:0;
+    border:0;
+    border-radius:5px;
+    background-color:#d2d2d2;
+    cursor:pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+/*---------------------------------------------*/
+
+
+
+
+.search_option_back{
+    width:100%;
+    height:100%;
+    background-color:rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    position:absolute;
+    top:0;
+    left:0;
+    visibility:hidden;
+    transition:all 0.5s ease-out;
+    z-index:31;
+}
+
+.search_option_back.clicked{
+    visibility:visible;
+    transition:all 0.5s ease-out;
+    opacity:1;
+}
+
+#search_option_wrap{
+    width:500px;
+    height:500px;
+    background-color:white;
+    border-radius: 25px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+}
+
+.search_option_div{
+    width:250px;
+    margin:0 auto;
+    margin-top:45px;
+}
+
+#search_option_wrap input{
+    width: 250px;
+    height:40px;
+    border:none;
+    padding: 0;
+    outline: none;
+    border-bottom: 1px solid #D2D2D2;
+    font-size:25px;
+    font-family: 'Dongle', sans-serif;
+}
+
+#club_search_btn{
+    float:left;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    margin-left:135px;
+}
+
+#search_cancel_btn{
+    float:left;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    margin-left:30px;
+}

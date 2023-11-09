@@ -1,0 +1,146 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    overflow:hidden;
+}
+
+.container{
+    width: 500px;
+    margin: 0 auto;
+    padding: 25px;
+    top:0;
+}
+.container h1{
+    text-align: left;
+    padding: 5px 5px 5px 15px;
+    color: #FFBB00;
+    border-left: 3px solid #FFBB00;
+    margin-bottom: 20px;
+}
+.chating{
+    background-color: #cbf3b9;
+    width: 500px;
+    height: 500px;
+    overflow-y: scroll;
+    -ms-overflow-style: none; /* 인터넷 익스플로러 */
+    scrollbar-width: none; /* 파이어폭스 */
+}
+
+.chating::-webkit-scrollbar {
+    display: none;
+}
+
+.chatBack{
+    width:490px;
+    height:fit-content;
+    position:relative;
+    float:right;
+    padding:5px;
+}
+
+.chatBack .me{
+    color: white;
+    text-align: right;
+
+    position: relative;
+    background: #82b3d9;
+    border-radius: .4em;
+    width:fit-content;
+    height:fit-content;
+    float:right;
+    margin-right:10px;
+    padding:3px;
+}
+
+.chatBack .me:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 9px solid transparent;
+    border-left-color: #82b3d9;
+    border-right: 0;
+    border-top: 0;
+    margin-top: -4.5px;
+    margin-right: -9px;
+}
+
+.chatBack .othersPro{
+    position:relative;
+    width:100%;
+    height:fit-content;
+    float:left;
+}
+
+.chatBack .others{
+    color: white;
+    text-align: left;
+
+    position: relative;
+    background: #82b3d9;
+    border-radius: .4em;
+    width:fit-content;
+    height:fit-content;
+    float:left;
+    margin-left:10px;
+    padding:3px;
+}
+
+.chatBack .others:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 9px solid transparent;
+    border-right-color: #82b3d9;
+    border-left: 0;
+    border-top: 0;
+    margin-top: -4.5px;
+    margin-left: -9px;
+}
+
+input{
+    width: 330px;
+    height: 25px;
+}
+#yourMsg{
+    width:500px;
+    height:50px;
+    margin-top:10px;
+}
+
+#yourMsg #chatting{
+    background-color:white;
+    border:0;
+    border-bottom:0.02rem solid #D2D2D2;
+    outline: none;
+    width:400px;
+    height:20px;
+    padding-left:3px;
+    color:#4B4B4B;
+    font-size:13px;
+    padding-bottom:7px;
+    float:right;
+}
+
+#yourMsg #sendBtn{
+    width:50px;
+    height:30px;
+
+    font-size:12px;
+    float:right;
+    margin-left:10px;
+    border:0;
+    border-radius:5px;
+    background-color:#c1d3e2;
+    color:white;
+    transition-duration: 0.1s;
+    padding:0;
+}

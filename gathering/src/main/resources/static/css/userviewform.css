@@ -1,0 +1,107 @@
+/*메인 컨테이너 설정*/
+#userViewContainer{
+    height: 835px;
+    font-family: 'Dongle';
+    font-size: 25px;
+    line-height: 30px;
+}
+/*---------------------------------------------*/
+
+
+#img_back{
+    border:1px solid #D2D2D2;
+    width:200px;
+    height:200px;
+    border-radius: 70%;
+    overflow: hidden;
+    margin:20px 0 20px 20px;
+}
+
+#img_back img{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit: cover;
+}
+
+#profile_content{
+    width:250px;
+    text-align:left;
+    margin:0;
+    float:left;
+}
+
+#profile_content span{
+    display:inline-block;
+    margin-top:30px;
+    margin-left:20px;
+}
+
+.hi2{
+    width:65px;
+}
+
+.hi{
+    width:130px;
+}
+
+.list{
+    text-align: left;
+    float:right;
+    width:600px;
+    margin-right:20px;
+    margin-top:30px;
+}
+
+.list span{
+    margin-top:15px;
+    margin-bottom:5px;
+    display:block;
+}
+
+.listDiv{
+    width:598px;
+    height:158px;
+    border:1px solid #D2D2D2;
+}
+
+.listHeader{
+    width:598px;
+    height:39px;
+    border-bottom:1px solid #D2D2D2;
+}
+
+.listSubject{
+    width: 403px;
+    display: inline-block;
+    padding-left:10px;
+}
+
+.listHost{
+    width: 180px;
+    display: inline-block;
+    text-align: center;
+}
+
+.listBody{
+    width:598px;
+    height:120px;
+    overflow:scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.listBody::-webkit-scrollbar {
+  display: none;
+}
+
+.listContent{
+    height:39px;
+    border-bottom:1px solid #D2D2D2;
+}
+
+#edit_btn{
+    float:left;
+    margin-left:20px;
+    margin-top:60px;
+}

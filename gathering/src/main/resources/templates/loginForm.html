@@ -1,0 +1,298 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, user-scalable=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <style>
+        html{
+            width:100%;
+            height:100%
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            position:relative;
+            width:100%;
+            height:100%
+        }
+
+        p{
+            padding:0;
+            margin:0;
+       }
+
+       .back > *{
+           position:relative;
+           display:block;
+           margin:0 auto;
+       }
+
+       .back {
+           position:absolute;
+           top:50%;
+           left:50%;
+           transform: translate(-50%, -60%);
+           width: 600px;
+       }
+
+       .back input{
+           background-color:white;
+           border:0;
+           border-bottom:0.02rem solid #D2D2D2;
+           outline: none;
+           width:300px;
+           height:20px;
+           padding-left:3px;
+           color:#4B4B4B;
+           font-size:13px;
+           padding-bottom:7px;
+       }
+
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
+        .back input:focus::placeholder{
+            color:transparent;
+        }
+
+        /* Edge */
+        input:focus::-ms-input-placeholder{
+            color:transparent;
+        }
+
+       #userId{
+           margin-top:30px;
+       }
+
+       #password{
+           margin-top:70px;
+       }
+
+       .error_wrap{
+           width:215px;
+           height:10px;
+       }
+
+       .error_wrap > div{
+           font-size:10px;
+           text-align: left;
+       }
+
+        .field-error > p{
+            font-size:10px;
+            text-align: left;
+        }
+
+        #login_btn{
+            margin-top:70px;
+            border-radius:80px / 70px;
+            border:0;
+            background-color:#00A90B;
+            color:white;
+            transition-duration: 0.1s;
+            width:275px;
+            height:45px;
+            font-size:15px;
+        }
+
+        #login_btn:hover{
+            background-color:#4FD700;
+            transition-duration: 0.1s;
+        }
+
+        #forgot_pw{
+            margin-top:25px;
+            font-size:8px;
+            text-align: left;
+            width:300px;
+        }
+
+        #sign_up_lnk{
+            margin-top:10px;
+            font-size:8px;
+            text-align: left;
+            width:300px;
+        }
+
+        #login_img{
+            width:300px;
+        }
+
+        #login_welcome{
+            width:600px;
+            font-size:40px;
+            margin: 0 auto 20px;
+            font-family: 'Secular One', sans-serif;
+            text-align: center;
+        }
+        @media(max-width:450px) {
+       html{
+            width:100%;
+            height:100%
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            position:relative;
+            width:100%;
+            height:100%
+        }
+
+        p{
+            padding:0;
+            margin:0;
+       }
+
+       .back > *{
+           position:relative;
+           display:block;
+           margin:0 auto;
+       }
+
+       .back {
+           position:absolute;
+           top:50%;
+           left:50%;
+           transform: translate(-50%, -50%);
+           width: 300px;
+       }
+
+       .back input{
+           background-color:white;
+           border:0;
+           border-bottom:0.02rem solid #D2D2D2;
+           outline: none;
+           width:300px;
+           height:20px;
+           padding-left:3px;
+           color:#4B4B4B;
+           font-size:13px;
+           padding-bottom:7px;
+       }
+
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
+        .back input:focus::placeholder{
+            color:transparent;
+        }
+
+        /* Edge */
+        input:focus::-ms-input-placeholder{
+            color:transparent;
+        }
+
+       #userId{
+           margin-top:30px;
+       }
+
+       #password{
+           margin-top:70px;
+       }
+
+       .error_wrap{
+           width:215px;
+           height:10px;
+       }
+
+       .error_wrap > div{
+           font-size:10px;
+           text-align: left;
+       }
+
+        .field-error > p{
+            font-size:10px;
+            text-align: left;
+        }
+
+        #login_btn{
+            margin-top:70px;
+            border-radius:80px / 70px;
+            border:0;
+            background-color:#00A90B;
+            color:white;
+            transition-duration: 0.1s;
+            width:275px;
+            height:45px;
+            font-size:15px;
+        }
+
+        #login_btn:hover{
+            background-color:#4FD700;
+            transition-duration: 0.1s;
+        }
+
+        #forgot_pw{
+            margin-top:25px;
+            font-size:8px;
+            text-align: left;
+            width:300px;
+        }
+
+        #sign_up_lnk{
+            margin-top:10px;
+            font-size:8px;
+            text-align: left;
+            width:300px;
+        }
+
+        #login_img{
+            width:300px;
+        }
+
+        #login_welcome{
+            width:300px;
+            font-size:40px;
+            margin: 0 auto 20px;
+            font-family: 'Secular One', sans-serif;
+            text-align: center;
+        }
+}
+    </style>
+</head>
+<body>
+    <form class="back" action="item.html" th:action th:object="${loginUser}" method="post">
+        <p id="login_welcome">Welcome</p>
+        <img id="login_img" src="/images/img.png">
+        <img id="login_imgs" src="imgg/sla.jpg">
+        <div class="error_wrap">
+            <div id="error_wrong" th:if="${#fields.hasGlobalErrors()}">
+                <p class="field-error"
+                   th:each="err : ${#fields.globalErrors()}"
+                   th:text="${err}">
+                    전체 오류 메시지
+                </p>
+            </div>
+        </div>
+        <input type="text" id="userId"
+               th:field="*{userId}"
+               class="form-control"
+               th:errorclass="field-error"
+               placeholder="Id"/>
+        <div class="error_wrap">
+            <div id="error_id"
+                 class="field-error"
+                 th:errors="*{userId}" />
+        </div>
+
+        <input type="password" id="password"
+               th:field="*{password}"
+               class="form-control"
+               th:errorclass="field-error"
+                placeholder="Password"/>
+        <div class="error_wrap">
+            <div id="error_pw"
+                 class="field-error"
+                 th:errors="*{password}" />
+        </div>
+
+        <button id="login_btn"
+                class="w-100 btn btn-primary btn-lg"
+                type="submit">로그인
+        </button>
+        <a id="forgot_pw" href="#">Forgot Password?</a>
+        <a id="sign_up_lnk" href="#" th:onclick="|location.href='@{/signUp}'|">Sign Up</a>
+    </form>
+</body>
+</html>

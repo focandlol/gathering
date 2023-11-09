@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>환영 관리자 페이지!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</h1>
+<button th:onclick="|location.href='@{/admin/feedback}'|">피드백</button>
+<form id="search_option_wrap" th:object="${userSearchCond}" th:action="@{/admin}" method="get">
+    <div class="search_option_div">
+        <p>이름</p>
+        <input type="text" th:field="*{userId}"placeholder="아이디를 입력하세요">
+    </div>
+    <button id="club_search_btn" class="btn_10050" type="submit">검색</button>
+
+</form>
+<div class="mainContentWrap">
+  <div class="clubDiv" th:each="user : ${users}">
+    <p class="clubDivP" th:text="${user.userId}"></p>
+      <button class="btn_10050" th:myName="${user.userId}" onclick="userOut(this.getAttribute('myName'))">탈퇴</button>
+  </div>
+
+  <div id="clubButtonWrap">
+    <div id="clubPageList">
+            <span class="clubPageBtn" th:each="page : ${#numbers.sequence(startPage,endPage)}">
+                <a th:if="${page != nowPage}" th:href="@{/admin(page = ${page - 1}, userId = ${userSearchCond.userId})}" th:text="${page}"></a>
+                <strong th:if="${page == nowPage}" th:text="${page}"></strong>
+            </span>
+    </div>
+  </div>
+</div>
+</body>
+<script>
+    function userOut(id){
+        let userId = id;
+
+        $.ajax({
+           url : "/admin",
+           type : 'post',
+           data : {userId : userId},
+            success : function() { // controllor에서 list를 return 받았음
+                location.reload();
+            }
+        });
+
+    }
+</script>
+</html>

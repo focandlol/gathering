@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, user-scalable=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/indexstyle.css?after">
+    <link rel="stylesheet" type="text/css" href="/css/mainform.css">
+    <link rel="stylesheet" type="text/css" href="/css/noticeInform.css">
+    <link rel="stylesheet" type="text/css" href="/css/mo/indexstyle_m.css?after">
+    <link rel="stylesheet" type="text/css" href="/css/mo/noticeInform_m.css">
+</head>
+<body>
+<div th:replace="~{template/side :: copyParam (${user})}"></div>
+
+<div class="container">
+    <p class="mainTitle">공지사항</p>
+    <div id="noticeInWrap" class="mainContentWrap">
+        <table id="forum_info">
+            <tr id="info_tr1">
+                <td style="width:590px;">
+                    <span>제목 : </span>
+                    <span id="subject" th:text="${notice.subject}"></span>
+                </td>
+                <td style="width:250px;text-align: right;">
+                    <span>회장 : </span>
+                    <span id="host" th:text="${notice.host}"></span>
+                </td>
+            </tr>
+        </table>
+
+        <div id="forum_content" style="white-space: pre;" th:text="${notice.content}"></div>
+        <button id="return_btn">글 목록</button>
+    </div>
+
+</div>
+</body>
+</html>

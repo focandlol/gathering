@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="/css/sign-up-form.css">
+    <link rel="stylesheet" type="text/css" href="/css/mo/sign-up-form_m.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script>
+        function sample6_execDaumPostcode() {
+            new daum.Postcode({
+                oncomplete: function(data) {
+                    // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+                    // 각 주소의 노출 규칙에 따라 주소를 조합한다.
+                    // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+                    var addr = ''; // 주소 변수
+                    var extraAddr = ''; // 참고항목 변수
+
+                    //사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+                    if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+                        addr = data.roadAddress;
+                    } else { // 사용자가 지번 주소를 선택했을 경우(J)
+                        addr = data.jibunAddress;
+                    }
+
+                    // 사용자가 선택한 주소가 도로명 타입일때 참고항목을 조합한다.
+                    if(data.userSelectedType === 'R'){
+                        // 법정동명이 있을 경우 추가한다. (법정리는 제외)
+                        // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
+                        if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
+                            extraAddr += data.bname;
+                        }
+                        // 건물명이 있고, 공동주택일 경우 추가한다.
+                        if(data.buildingName !== '' && data.apartment === 'Y'){
+                            extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+                        }
+                        // 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
+                        if(extraAddr !== ''){
+                            extraAddr = ' (' + extraAddr + ')';
+                        }
+                        // 조합된 참고항목을 해당 필드에 넣는다.
+                        document.getElementById("extraAddress").value = extraAddr;
+
+                    } else {
+                        document.getElementById("extraAddress").value = '';
+                    }
+
+                    // 우편번호와 주소 정보를 해당 필드에 넣는다.
+                    document.getElementById('postcode').value = data.zonecode;
+                    document.getElementById("address").value = addr;
+                    // 커서를 상세주소 필드로 이동한다.
+                    document.getElementById("detailAddress").focus();
+                }
+            }).open();
+        }
+    </script>
+</head>
+<body>
+<form class="back" action="item.html" th:action th:object="${user}" method="post">
+    <p>아이디</p>
+    <input type="text" id="userId" th:field="*{userId}"placeholder="아이디를 입력하세요">
+    <div class="error_wrap"><div class="field-error" th:errors="*{userId}"></div></div>
+
+    <p class="sign_up_text1">비밀번호</p>
+    <input type="text" id="password" th:field="*{password}"placeholder="비밀번호를 입력하세요">
+    <div class="error_wrap"><div class="field-error" th:errors="*{password}"></div></div>
+
+    <p class="sign_up_text2">이름</p>
+    <input type="text" id="name" th:field="*{name}" placeholder="이름을 입력하세요">
+    <div class="error_wrap"><div class="field-error" th:errors="*{name}"></div></div>
+
+    <p class="sign_up_text1">닉네임</p>
+    <input type="text" id="nickName" th:field="*{nickName}"placeholder="닉네임을 입력하세요">
+    <div class="error_wrap"><div class="field-error" th:errors="*{nickName}"></div></div>
+
+    <p class="sign_up_text1">이메일 인증</p>
+    <input type="text" id="email" name="email" th:field="*{email}" placeholder="이메일을 입력하세요">
+    <label for="email" id="memailconfirmTxt1"></label>
+
+    <input type="text" class="emailInput" placeholder="인증번호를 입력해주세요" th:field="${maildto.memailconfirm}" id="memailconfirm" name="memailconfirm">
+    <button type="button" id="checkEmail" onclick="ajaxTest()">인증번호</button>
+
+    <label for="memailconfirm" id="memailconfirmTxt">인증을 완료해주세요</label>
+
+    <input type="hidden" id="ischecked" th:field="${maildto.ischecked}" value="unchecked">
+    <input type="hidden" id="isEqualEmail" th:field="${maildto.isEqualEmail}" value="unchecked">
+
+    <p class="sign_up_text2">주소</p>
+    <input class="input_address" type="text" id="postcode" th:field="*{postcode}"placeholder="우편번호">
+    <input class="input_address" type="button" id="address_btn" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"><br>
+    <input class="input_address" type="text" id="address" th:field="*{address} "placeholder="주소">
+    <input class="input_address" type="text" id="detailAddress" th:field="*{detailAddress} "placeholder="상세주소">
+    <input type="text" id="extraAddress" th:field="*{extraAddress}" placeholder="참고항목">
+    <div class="error_wrap"><div class="field-error" th:errors="*{address}"></div></div>
+
+    <p>전화번호</p>
+    <input type="tel" maxlength="11" id="phoneNumber" th:field="*{phoneNumber}" placeholder="전화번호 입력하세요">
+    <div class="error_wrap"><div class="field-error" th:errors="*{phoneNumber}"></div></div>
+
+    <button id="sign_up_btn" type="submit">회원 가입</button>
+</form>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script>
+    // 이메일 인증번호
+    let val = $('#ischecked').val();
+
+    if(val == "checked"){
+        document.getElementById('email').readOnly = true; // readonly 활성화
+        document.getElementById('memailconfirm').readOnly = true;
+        $('#memailconfirmTxt').html("<span id='emconfirmchk'>인증번호 확인 완료</span>")
+        $("#emconfirmchk").css({
+            "color" : "#FA3E3E",
+            "font-weight" : "bold",
+            "font-size" : "10px"
+
+        })
+    }
+    function ajaxTest() {
+       let val = $("#email").val();
+
+        $.ajax({
+            url : "/sign",
+            type : 'post',
+            data : {"email":val},
+            success : function(data) { // controllor에서 list를 return 받았음
+                let split = data.split('|');
+                if (split[1] == null || split[1] == "") {
+                    console.log("null");
+                   $('#memailconfirmTxt1').html("<span id='emconfirmchk1'>중복된 이메일</span>")
+                } else {
+                    $('#memailconfirmTxt1').html("<span id='emconfirmchk1'></span>")
+                    alert("해당 이메일로 인증번호 발송이 완료되었습니다. \n 확인부탁드립니다.")
+                    console.log("data : " + data);
+                    chkEmailConfirm(data, $('#memailconfirm'), $('#memailconfirmTxt'));
+                }
+            },
+            error : function() {
+                alert("error");
+            }
+        });
+    }
+
+    // 이메일 인증번호 체크 함수
+    function chkEmailConfirm(data, $memailconfirm, $memailconfirmTxt){
+        let split = data.split('|');
+        $memailconfirm.on("keyup", function(){
+            if (split[1] != $memailconfirm.val()) { //
+                emconfirmchk = false;
+                $memailconfirmTxt.html("<span id='emconfirmchk'>인증번호가 잘못되었습니다</span>")
+                $("#emconfirmchk").css({
+                    "color" : "#FA3E3E",
+                    "font-weight" : "bold",
+                    "font-size" : "10px"
+
+                })
+                //console.log("중복아이디");
+            } else { // 아니면 중복아님
+                let val = $("#email").val();
+                if(split[0] != val){
+                    $('#memailconfirmTxt1').html("<span id='emconfirmchk1'>바뀐 이메일</span>")
+                    $memailconfirmTxt.html("<span id='emconfirmchk'>재인증 필요</span>")
+                    $("#emconfirmchk").css({
+                        "color" : "#FA3E3E",
+                        "font-weight" : "bold",
+                        "font-size" : "10px"
+
+                    })
+                }
+                else {
+                    $('#memailconfirmTxt1').html("<span id='emconfirmchk1'></span>")
+                    emconfirmchk = true;
+                    document.getElementById('email').readOnly = true; // readonly 활성화
+                    //document.getElementById('memailconfirm').readOnly = true;
+                    $memailconfirmTxt.html("<span id='emconfirmchk'>인증이 완료되었습니다.</span>")
+
+                    $('#ischecked').val("checked");
+                    $('#isEqualEmail').val("checked");
+                    let val1 = $('#ischecked').val();
+                    console.log(val1);
+                    console.log("done");
+                    $("#emconfirmchk").css({
+                        "color": "#0D6EFD",
+                        "font-weight": "bold",
+                        "font-size": "10px"
+
+                    })
+                }
+            }
+        })
+    }
+</script>
+</html>

@@ -1,0 +1,167 @@
+#ltAddContainer{
+    height:810px;
+}
+
+input{
+    outline:none;
+    border:0;
+    border-bottom: 1px solid #D2D2D2;
+    padding:0;
+    margin:0;
+}
+
+#forum_add_form{
+    width: 920px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    height: 720px;
+    box-shadow: 1px 1px 5px gray;
+}
+
+.error_wrap{
+    height:13px;
+    width:100%;
+    float:left;
+}
+
+.error_wrap > div{
+    text-align: left;
+}
+
+#forum_add_form > div{
+    float:left;
+}
+
+#forum_add_form > div > p{
+    text-align: left;
+    font-size:20px;
+}
+
+#forum_add_form > div > input[type=text]{
+    height:29px;
+    float:left;
+}
+
+.forum_add_div_32{
+    width:630px;
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-family: 'Dongle';
+    line-height: 25px;
+}
+
+.forum_add_div_31{
+    width:250px;
+    font-size: 25px;
+    font-family: 'Dongle';
+    line-height: 25px;
+}
+
+.forum_add_div_31 > input{
+    width:250px;
+}
+
+.forum_add_div_full{
+    width:880px;
+    height:400px;
+    font-size: 25px;
+    font-family: 'Dongle';
+    line-height: 25px;
+}
+
+#subject{
+    width:610px;
+}
+
+#address_div > input{
+    margin-bottom:10px;
+}
+
+#postcode{
+    width:490px;
+}
+
+#find_address_btn{
+    background-color: #3B3B3B;
+    width: 100px;
+    height: 30px;
+    margin-left: 20px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    float: left;
+    font-family: 'Dongle';
+    font-size: 23px;
+    line-height:23px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#find_address_btn:hover{
+    background-color:#626262;
+}
+
+#address{
+    width:610px;
+}
+
+#detailAddress{
+    width:295px;
+}
+
+#extraAddress{
+    width:295px;
+    margin-left:20px;
+}
+
+#content{
+    height: 338px;
+    width: 878px;
+    border: 1px solid #D2D2D2;
+    padding: 5px;
+    outline: none;
+    resize: none;
+    display: block;
+}
+
+#cancel_btn{
+    background-color: #3B3B3B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 25px;
+    padding: 0;
+    cursor: pointer;
+    font-family: 'Dongle';
+}
+
+#cancel_btn:hover {
+    background-color:#626262;
+}
+
+#add_btn{
+    background-color: #3B3B3B;
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 25px;
+    padding: 0;
+    display: block;
+    cursor: pointer;
+    float: right;
+    margin-left: 10px;
+}
+
+#add_btn:hover {
+    background-color:#626262;
+}

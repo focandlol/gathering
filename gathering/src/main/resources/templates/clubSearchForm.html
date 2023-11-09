@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <style>
+        .field-error{
+            color:red;
+            font-size:1px;
+            width:100%;
+            height:100%;
+            text-align:left;
+            font-size:60%;
+        }
+
+        body{
+            margin:0;
+            padding:0;
+        }
+
+        p{
+            padding:0;
+            margin:0;
+        }
+
+        .back > *{
+            position:relative;
+        }
+
+        .back{
+            border:0.02rem solid #D2D2D2;
+            border-radius:1.5%;
+            position:absolute;
+            width:20%;
+            height:70%;
+            left:40%;
+            top:10%;
+            text-align:center;
+        }
+
+        .back input{
+            background-color:#F2F2F2;
+            border-radius: 1.5%;
+            border:0;
+            outline: none;
+            width:55%;
+            height:4.3%;
+            padding-left:3%;
+            margin-bottom:1.5%;
+        }
+
+        .back p{
+            left:22.5%;
+            text-align:left;
+            font-size:110%;
+            margin-top:2.5%;
+        }
+
+        .back button{
+            width:25%;
+            height:5.5%;
+        }
+
+        #postcode{
+            width:32%;
+        }
+
+        #address_btn{
+            width:21.5%;
+            font-size:60%;
+        }
+
+        .back button{
+            top:0%;
+        }
+
+        .error_wrap{
+            height:2%;
+            width:55%;
+            left:22.5%;
+        }
+    </style>
+</head>
+<body>
+<form class="back" th:object="${clubSearchCond}" th:action="@{/club}" method="post" enctype="multipart/form-data">
+    <p>동호회 이름</p>
+    <input type="text" th:field="*{clubName}"placeholder="아이디를 입력하세요">
+    <div class="error_wrap"><div class="field-error" th:errors="*{clubName}"></div></div>
+
+    <p>작성자</p>
+    <input type="text" th:field="*{host}"placeholder="비밀번호를 입력하세요">
+    <div class="error_wrap"><div class="field-error" th:errors="*{host}"></div></div>
+
+    <br><button type="submit">제출</button>
+</form>
+</body>
+</html>

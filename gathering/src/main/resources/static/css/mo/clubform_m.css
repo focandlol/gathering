@@ -1,0 +1,205 @@
+@media(max-width:450px) {
+    /*메인 컨테이너 설정*/
+    #clubContainer{
+        width:350px;
+        height:860px;
+    }
+    /*---------------------------------------------*/
+    .mainContentWrap {
+        height: 780px;
+    }
+
+    .clubDiv{
+        width:150px;
+        float:left;
+        margin-left: 15px;
+        margin-right: 10px;
+        margin-top:15px;
+    }
+
+    .clubDivP{
+        width:100px;
+        margin: 5px auto 0;
+        text-align: center;
+    }
+
+    .img_back{
+        border-radius: 5px;
+        overflow: hidden;
+        width:140px;
+        height:170px;
+        background-color: aquamarine;
+        box-shadow:1px 1px 5px gray;
+    }
+
+    .img_back > img{
+        width:100%;
+        height:100%;
+        position:relative;
+        display:block;
+        object-fit: cover;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+    }
+
+
+    /*버튼 랩 설정*/
+    #clubButtonWrap{
+        position:absolute;
+        bottom:70px;
+        height:50px;
+        margin:0;
+    }
+
+    #clubButtonWrap > *{
+        float:left;
+    }
+    /*---------------------------------------------*/
+
+
+    /*페이지 리스트 설정*/
+    #clubPageList{
+        width:180px;
+        height:50px;
+        margin-left:80px;
+        display:inline-block;
+        background-color:white;
+    }
+
+    .clubPageBtn{
+        width:40px;
+        height:50px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        cursor:pointer;
+    }
+
+    .clubPageBtnIn{
+        text-decoration: none;
+        font-size: 30px;
+        font-family: 'Dongle';
+        color:black;
+    }
+    /*---------------------------------------------*/
+
+
+    /*버튼 설정*/
+    #clubAddBtn{
+        width:80px;
+        height:40px;
+        margin-left:20px;
+        padding:0;
+        border:0;
+        border-radius:5px;
+        background-color:#d2d2d2;
+        cursor:pointer;
+    }
+
+    #clubSearchBtn{
+        width:80px;
+        height:40px;
+        margin-left:150px;
+        padding:0;
+        border:0;
+        border-radius:5px;
+        background-color:#d2d2d2;
+        cursor:pointer;
+    }
+    /*---------------------------------------------*/
+
+
+
+
+    .search_option_back{
+        width:100%;
+        height:100%;
+        background-color:rgba(0, 0, 0, 0.6);
+        opacity: 0;
+        position:absolute;
+        top:0;
+        left:0;
+        visibility:hidden;
+        transition:all 0.5s ease-out;
+        z-index:31;
+    }
+
+    .search_option_back.clicked{
+        visibility:visible;
+        transition:all 0.5s ease-out;
+        opacity:1;
+    }
+
+    #search_option_wrap{
+        width:340px;
+        height:400px;
+        background-color:white;
+        border-radius: 25px;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%, -50%);
+    }
+
+    .search_option_div{
+        width:250px;
+        margin:0 auto;
+        margin-top:50px;
+    }
+
+    #search_option_wrap input{
+        width: 250px;
+        height:40px;
+        border:none;
+        padding: 0;
+        outline: none;
+        border-bottom: 1px solid #D2D2D2;
+        font-size:25px;
+        font-family: 'Dongle', sans-serif;
+    }
+
+    #club_search_btn{
+        float:left;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        margin-left:40px;
+    }
+
+    #search_cancel_btn{
+        float:left;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        margin-left:60px;
+    }
+
+}
+
+@media(max-width:400px) {
+    .search_option_back{
+        width:100%;
+        height:123%;
+        background-color:rgba(0, 0, 0, 0.6);
+        opacity: 0;
+        position:absolute;
+        top:0;
+        left:0;
+        visibility:hidden;
+        transition:all 0.5s ease-out;
+        z-index:31;
+    }
+    #search_option_wrap{
+        width:340px;
+        height:400px;
+        background-color:white;
+        border-radius: 25px;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%, -70%);
+    }
+}

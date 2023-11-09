@@ -1,0 +1,325 @@
+body{
+    overflow-x:hidden;
+}
+
+/*메인 컨테이너 설정*/
+#indexContainer{
+    height:1250px;
+}
+/*---------------------------------------------*/
+
+
+/*슬라이드 배너 설정*/
+.main_lt_slide {
+    width: 920px;
+    height: 300px;
+}
+
+.main_lt_slide *{
+    width:100%;
+    height:100%;
+}
+
+.main_lt_slide input[id*="lt_slide"]{
+    display:none;
+}
+
+.main_lt_slide .lt_slide_wrap{
+    width:100%;
+    margin:0 auto;
+    overflow:hidden;
+}
+
+.lt_slide_list {
+    padding: 0;
+}
+
+.main_lt_slide .lt_slide_list{
+    white-space:nowrap;
+    font-size:0;
+}
+
+.main_lt_slide .lt_slide_list > li{
+    display:inline-block;
+    vertical-align: middle;
+    transition:all .5s;
+}
+
+.main_lt_slide .lt_slide_list > li > a{
+    display:block;
+    position:relative;
+}
+
+.main_lt_slide .lt_slide_list > li > a > div{
+    width:100%;
+}
+
+.main_lt_slide [id="lt_slide01"]:checked ~ .lt_slide_wrap .lt_slide_list > li{
+    transform:translateX(0%);
+}
+
+.main_lt_slide [id="lt_slide02"]:checked ~ .lt_slide_wrap .lt_slide_list > li{
+    transform:translateX(-100%);
+}
+
+.main_lt_slide [id="lt_slide03"]:checked ~ .lt_slide_wrap .lt_slide_list > li{
+    transform:translateX(-200%);
+}
+
+.mainLtSlideControl{
+    width:920px;
+    height:50px;
+}
+
+.slideControlBtn{
+    width:50px;
+    height:50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+}
+
+#slideControlStart{
+    display:none;
+}
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+
+/*카테고리 배너*/
+#categoryBanner{
+    width:920px;
+    height:120px;
+}
+
+.categoryDiv{
+    display:inline-block;
+    width:80px;
+    height:100px;
+    margin-right:60px;
+    cursor:pointer;
+}
+
+.categoryDiv:first-child{
+    margin-left:200px;
+}
+
+.categoryDiv:last-child{
+    margin-right:0;
+}
+
+.categoryImg{
+    display:block;
+    width:80px;
+    height:80px;
+}
+
+.categoryName{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:80px;
+    height:20px;
+}
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+
+/*번개 게시판 배너*/
+#ltForumBanner{
+    width:920px;
+    height:360px;
+}
+
+#ltForumBannerTitle{
+    font-size:40px;
+    height:60px;
+    margin-right:700px;
+    display:inline-block;
+    cursor:pointer;
+}
+
+#ltForumWrapOver{
+    width:920px;
+    height:300px;
+    overflow-x:hidden;
+    scroll-behavior: smooth;
+}
+
+#ltForumWrap{
+    width:2760px;
+    height:300px;
+}
+
+.ltForumBannerDiv{
+    width:190px;
+    height:280px;
+    padding: 5px 10px;
+    display:inline-block;
+    margin-right:20px;
+    background-color:white;
+    border-radius:5px;
+    box-shadow:1px 1px 5px gray;
+    float:left;
+    margin-top:5px;
+}
+
+.ltForumBannerDiv:first-child{
+    margin-left:10px;
+}
+
+.ltForumBannerDiv:last-child{
+    margin-right:10px;
+}
+
+.ltForumBannerTiCon{
+    height:250px;
+    width:100%;
+    overflow:hidden;
+}
+
+.forumBannerTitle{
+    width: 100%;
+    line-height: 28px;
+    margin-top: 3px;
+}
+
+.forumBannerTitle > p{
+    font-size:30px;
+}
+
+.forumBannerContent{
+    width: 100%;
+    line-height: 22px;
+    margin-top: 10px;
+}
+
+.forumBannerHost{
+    width:100%;
+    height:25px;
+}
+
+#forumControllerLeft{
+    top:650px;
+    left:-25px;
+}
+
+#forumControllerRight{
+    top:650px;
+    right:-25px;
+}
+
+.forumControlBtn{
+    position:absolute;
+    background-color:white;
+    opacity:0.5;
+    width:50px;
+    height:50px;
+    border-radius:25px;
+    box-shadow:1px 1px 5px gray;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+}
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+
+/*번개 게시판 배너*/
+#clubBanner{
+    width:920px;
+    height:360px;
+    margin-top:15px;
+}
+
+#clubBannerTitle{
+    font-size:40px;
+    height:60px;
+    margin-right:700px;
+    display:inline-block;
+    cursor:pointer;
+}
+
+#clubWrapOver{
+    width:920px;
+    height:300px;
+    overflow-x:hidden;
+    scroll-behavior: smooth;
+}
+
+#clubWrap{
+    width:2760px;
+    height:300px;
+}
+
+.clubBannerDiv{
+    width:190px;
+    height:280px;
+    padding: 5px 10px;
+    display:inline-block;
+    margin-right:20px;
+    background-color:white;
+    border-radius:5px;
+    box-shadow:1px 1px 5px gray;
+    float:left;
+    margin-top:5px;
+}
+
+.clubBannerDiv:first-child{
+    margin-left:10px;
+}
+
+.clubBannerDiv:last-child{
+    margin-right:10px;
+}
+
+.clubBannerTiCon{
+    height:250px;
+    width:100%;
+    overflow:hidden;
+}
+
+.clubBannerTitle{
+    width: 100%;
+    line-height: 28px;
+    margin-top: 3px;
+}
+
+.clubBannerTitle > p{
+    font-size:30px;
+}
+
+.clubBannerContent{
+    width: 100%;
+    line-height: 22px;
+    margin-top: 10px;
+}
+
+.clubBannerHost{
+    width:100%;
+    height:25px;
+}
+
+#clubControllerLeft{
+    top:1025px;
+    left:-25px;
+}
+
+#clubControllerRight{
+    top:1025px;
+    right:-25px;
+}
+
+.clubControlBtn{
+    position:absolute;
+    background-color:white;
+    opacity:0.5;
+    width:50px;
+    height:50px;
+    border-radius:25px;
+    box-shadow:1px 1px 5px gray;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+}
+/*-----------------------------------------------------------------------------------------------------------------*/

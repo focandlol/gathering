@@ -1,0 +1,54 @@
+@media(max-width:450px) {
+#clubAddContainer{
+  width:350px;
+    height:780px;
+}
+.mainContentWrap {
+    height:600px;
+}
+#clubContentWrap {
+    height:700px;
+}
+    .forum_add_div_32{
+    width: 300px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.forum_add_div_32 > input[type=text]{
+    width:300px;
+    height:29px;
+}
+
+.forum_add_div_32 > input[type=tel]{
+    width:300px;
+    height:29px;
+}
+
+#address_div > input{
+    margin-bottom:10px;
+}
+
+#contents {
+    height: 300px;
+    width: 300px;
+    border: 1px solid #D2D2D2;
+    padding: 5px;
+    outline: none;
+    resize: none;
+}
+
+#submit_btn{
+    width:80px;
+    bottom: 30px;
+    position: absolute;
+    transform: translate(-50%);
+    left: 50%;
+    border-radius:5px;
+    background-color:#3B3B3B;
+    cursor:pointer;
+    color:white;
+}
+
+}

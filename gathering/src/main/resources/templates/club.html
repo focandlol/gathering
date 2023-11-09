@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, user-scalable=no">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/vendor.css?afterfsdf">
+    <link rel="stylesheet" type="text/css" href="/css/indexstyle.css?aftersdf">
+    <link rel="stylesheet" type="text/css" href="css/mainform.css">
+    <link rel="stylesheet" type="text/css" href="css/clubform.css?after">
+    <link rel="stylesheet" type="text/css" href="/css/mo/indexstyle_m.css?aftersdf">
+    <link rel="stylesheet" type="text/css" href="css/mo/clubform_m.css?after">
+</head>
+<body>
+<div th:replace="~{template/side :: copyParam (${user})}"></div>
+
+<div id="clubContainer" class="container">
+    <p class="mainTitle">동호회 게시판</p>
+    <div class="mainContentWrap">
+        <div class="clubDiv" th:each="club : ${club}" th:onclick="|location.href='@{/club/{clubId}(clubId=${club.clubId})}'|">
+            <div class="img_back"><img th:src="|/images/${club.getStoreFile()}|"></div>
+            <p class="clubDivP" th:text="${club.clubName}"></p>
+        </div>
+
+        <div id="clubButtonWrap">
+            <div id="clubPageList">
+            <span class="clubPageBtn" th:each="page : ${#numbers.sequence(startPage,endPage)}">
+                <a class="clubPageBtnIn" th:if="${page != nowPage}" th:href="@{/club(page = ${page - 1}, host = ${searchHost}, clubName=${searchSubject})}" th:text="${page}"></a>
+                <strong class="clubPageBtnIn" th:if="${page == nowPage}" th:text="${page}"></strong>
+            </span>
+            </div>
+
+            <button id="clubAddBtn"
+                    th:onclick="|location.href='@{/club/add}'|"
+                    type="button">동호회 생성</button>
+
+            <button id="clubSearchBtn"
+                    type="button" onclick="popup()">검색</button>
+        </div>
+    </div>
+</div> <!-- /container -->
+
+<div class="search_option_back">
+    <form id="search_option_wrap" th:object="${clubSearchCond}" th:action="@{/club}" method="get" enctype="multipart/form-data">
+        <div class="search_option_div">
+            <p>동호회 이름</p>
+            <input type="text" th:field="*{clubName}"placeholder="아이디를 입력하세요">
+            <div class="error_wrap"><div class="field-error" th:errors="*{clubName}"></div></div>
+        </div>
+
+        <div class="search_option_div">
+            <p>작성자</p>
+            <input type="text" th:field="*{host}"placeholder="비밀번호를 입력하세요">
+            <div class="error_wrap"><div class="field-error" th:errors="*{host}"></div></div>
+        </div>
+
+        <button id="club_search_btn" class="btn_10050" type="submit">검색</button>
+        <div id="search_cancel_btn" class="btn_10050" onclick="popup()">취소</div>
+    </form>
+</div>
+
+<script>
+    let popup_back = document.querySelector(".search_option_back");
+
+    function popup(){
+        let clicked = "clicked";
+        if(popup_back.classList.contains(clicked))
+        {
+            popup_back.classList.remove(clicked);
+        }
+        else {
+            popup_back.classList.add(clicked);
+        }
+    }
+</script>
+<script src="/script/jquery-1.11.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<script src="/script/plugins.js"></script>
+<script src="/script/script.js"></script>
+</body>
+</html>

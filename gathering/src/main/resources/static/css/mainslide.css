@@ -1,0 +1,98 @@
+.main_lt_slide {
+    position: absolute;
+    width: 100%;
+    height: 20%;
+}
+
+.main_lt_slide *{
+    width:100%;
+    height:100%;
+}
+
+.main_lt_slide input[id*="lt_slide"]{
+    display:none;
+}
+
+.main_lt_slide .lt_slide_wrap{
+    width:100%;
+    margin:0 auto;
+    overflow:hidden;
+}
+
+.lt_slide_list {
+    padding: 0;
+}
+
+.main_lt_slide .lt_slide_list{
+    white-space:nowrap;
+    font-size:0;
+}
+
+.main_lt_slide .lt_slide_list > li{
+    display:inline-block;
+    vertical-align: middle;
+    transition:all .5s;
+}
+
+.main_lt_slide .lt_slide_list > li > a{
+    display:block;
+    position:relative;
+}
+
+.main_lt_slide .lt_slide_list > li > a > div{
+    width:100%;
+}
+
+.main_lt_slide .lt_slide_list label{
+    position: absolute;
+    z-index: 10;
+    top:50%;
+    transform: translateY(-50%);
+    cursor:pointer;
+}
+
+.main_lt_slide_control{
+    position:absolute;
+    width:100%;
+    height:140px;
+    top:50%;
+    transform:translateY(-50%);
+
+}
+
+.main_lt_slide_control .lt_slide_left{
+    left:30px;
+    font-size:30px;
+    display:block;
+    position:absolute;
+    width:50px;
+    height:50px;
+    text-align: center;
+}
+
+.main_lt_slide_control .lt_slide_right{
+    right:30px;
+    font-size:30px;
+    display:block;
+    position:absolute;
+    width:50px;
+    height:50px;
+    text-align: center;
+}
+
+.main_lt_slide [id="lt_slide01"]:checked ~ .lt_slide_wrap .lt_slide_list > li{
+    transform:translateX(0%);
+}
+
+.main_lt_slide [id="lt_slide02"]:checked ~ .lt_slide_wrap .lt_slide_list > li{
+    transform:translateX(-100%);
+}
+
+.main_lt_slide [id="lt_slide03"]:checked ~ .lt_slide_wrap .lt_slide_list > li{
+    transform:translateX(-200%);
+}
+
+.main_lt_slide .main_lt_slide_control [class*="lt_control"] {display:none;}
+.main_lt_slide [id="lt_slide01"]:checked ~ .lt_slide_wrap .lt_control01 {display:block;}
+.main_lt_slide [id="lt_slide02"]:checked ~ .lt_slide_wrap .lt_control02 {display:block;}
+.main_lt_slide [id="lt_slide03"]:checked ~ .lt_slide_wrap .lt_control03 {display:block;}

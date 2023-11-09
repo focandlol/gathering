@@ -1,0 +1,98 @@
+@media(max-width:450px) {
+#noticeContainer {
+    width:350px;
+    height:690px;
+}
+.mainContentWrap {
+    height:620px;
+}
+#noticeWrap{
+    width: 350px;
+    height: 500px;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    padding-top: 10px;
+}
+
+#noticeWrap::-webkit-scrollbar {
+  display: none;
+}
+
+.noticeDiv{
+    width: 330px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px gray;
+    cursor: pointer;
+}
+
+.noticeTitle{
+    width:200px;
+    height:30px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.noticeTitle > span{
+    font-size:25px;
+}
+
+.noticeContent{
+    width:250px;
+    height:25px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.noticeContent >span {
+    font-size: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.noticeInfo >span {
+    font-size: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+/*---------------------------------------------*/
+
+#page_list{
+    width:200px;
+    height:50px;
+    margin-left:30px;
+    display:inline-block;
+    background-color:white;
+}
+
+.PageBtn{
+    width:40px;
+    height:50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+}
+
+#add_notice_btn{
+    background-color: #3B3B3B;
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 17px;
+    padding: 0;
+    display: block;
+    right: 20px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 80px;
+}
+
+#add_notice_btn:hover {
+    background-color:#626262;
+}
+}

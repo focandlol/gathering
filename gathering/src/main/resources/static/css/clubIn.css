@@ -1,0 +1,184 @@
+/*메인 컨테이너 설정*/
+#clubInContainer{
+    height:940px;
+}
+/*---------------------------------------------*/
+
+
+.club_menu_bar{
+    width: 920px;
+    height: 60px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+    margin-bottom: 15px;
+    font-family: 'Dongle';
+    font-size: 25px;
+    box-shadow:1px 1px 3px gray;
+}
+
+.club_menu_bar > div{
+    width: 180px;
+    height: 40px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    float: left;
+    border-radius: 5px;
+}
+
+.club_menu_bar > div:hover{
+    background-color: #FF5E5E;
+    color:white;
+    cursor:pointer;
+}
+
+.club_img_div{
+    width: 880px;
+    height: 350px;
+    margin-left: 20px;
+}
+
+.club_img_div > img{
+    display: block;
+    width:880px;
+    height:350px;
+}
+
+#clubInContent{
+    height:710px;
+    padding-top:20px;
+}
+
+#forum_content{
+    width: 920px;
+    padding: 20px;
+    min-height: 320px;
+    font-family: 'Dongle';
+    font-size: 25px;
+    line-height: 25px;
+    color: black;
+}
+
+.club_part_back {
+    background-color: white;
+    position: absolute;
+    top: 160px;
+    left: 50%;
+    transform: translate(500px, 0);
+    z-index: 30;
+    box-shadow: 1px 1px 3px gray;
+    width: 222px;
+    font-family: 'Dongle';
+    font-size: 30px;
+    line-height: 30px;
+    color: black;
+}
+
+.part_tr{
+    border-bottom:1px solid #D2D2D2;
+    height:50px;
+}
+
+.part_tr:last-child{
+    border-bottom:none;
+}
+
+.img_back{
+    border:1px solid #D2D2D2;
+    width:50px;
+    height:50px;
+    border-radius: 70%;
+    overflow: hidden;
+    display:inline-block;
+}
+
+.img_back img{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit: cover;
+}
+
+.clubUserImg{
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    display: inline-block;
+}
+
+.clubUserText{
+    width: 100px;
+    vertical-align: top;
+    display: inline-flex;
+    height: 50px;
+    align-items: center;
+    margin-left:10px;
+}
+
+.forumShutBtn{
+    background-color: #3B3B3B;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 25px;
+    line-height: 25px;
+    font-family: 'Dongle', 'sans-serif';
+    padding: 0;
+    right: 0;
+    cursor: pointer;
+    position: relative;
+    top: -23px;
+}
+
+#club_edit_btn{
+    background-color:#3B3B3B;
+    width:100px;
+    height:50px;
+    border:none;
+    border-radius: 5px;
+    color:white;
+    font-size:25px;
+    padding:0;
+    display:block;
+    right:0;
+    cursor:pointer;
+    float:right;
+    margin-top:20px;
+}
+
+#club_edit_btn:hover {
+    background-color:#626262;
+}
+
+#club_delete_btn{
+    background-color:#3B3B3B;
+    width:100px;
+    height:50px;
+    border:none;
+    border-radius: 5px;
+    color:white;
+    font-size:25px;
+    padding:0;
+    display:block;
+    right:0;
+    cursor:pointer;
+    float:right;
+    margin-top:20px;
+    margin-right:20px;
+}
+
+#club_delete_btn:hover {
+    background-color:#626262;
+}
+
+#club_m {
+    display:none;
+}

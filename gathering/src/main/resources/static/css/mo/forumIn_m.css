@@ -1,0 +1,447 @@
+
+@media(max-width:450px) {
+    #ltForumWrap {
+        height: auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    #ltForumInContainer {
+        width: 350px;
+        height: 730px;
+    }
+
+    #forum_info {
+        width: 330px;
+        margin-left: 10px;
+        border-collapse: collapse;
+    }
+
+    #forum_info td {
+        padding: 0 10px 0 10px;
+        height: 30px;
+        border-spacing: 0;
+        text-align: left;
+    }
+
+    #info_tr1 > td {
+        border-top: 1px solid #D2D2D2;
+    }
+
+    #info_tr2 > td {
+        border-bottom: 1px solid #D2D2D2;
+    }
+    #forum_content {
+        width: 330px;
+        margin-left: 7px;
+        padding: 7px;
+        min-height: 500px;
+        border-bottom: 1px solid #D2D2D2;
+        text-align: left;
+    }
+
+
+    #forum_comment > form > p {
+        font-size: 20px;
+        text-align: left;
+        padding: 5px;
+    }
+
+    #forum_comment > form > input[type=text] {
+        width: 270px;
+        height: 29px;
+        margin-bottom: 10px;
+    }
+
+    #forum_comment > form > button {
+        width: 50px;
+        height: 38px;
+    }
+
+    #forum_comment > table {
+        width: 330px;
+        margin: 0 auto;
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    #forum_comment > table > td {
+        height: 50px;
+        padding: 0;
+        border-spacing: 0;
+        border-bottom: 1px solid #D2D2D2;
+        border-top: 1px solid #D2D2D2;
+        text-align: left;
+    }
+
+    .comment_tr > td {
+        border-bottom: 1px solid #d2d2d2;
+    }
+
+    .profile_img {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    #delete_btn {
+        background-color: #3B3B3B;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 50px;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        font-size: 17px;
+        padding: 0;
+        right: 0;
+        cursor: pointer;
+        float: left;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+
+    #delete_btn:hover {
+        background-color: #626262;
+    }
+
+    #edit_btn {
+        background-color: #3B3B3B;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 50px;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        font-size: 17px;
+        padding: 0;
+        right: 0;
+        cursor: pointer;
+        float: left;
+        margin-left: 25px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+
+    #edit_btn:hover {
+        background-color: #626262;
+    }
+
+    #return_btn {
+        background-color: #3B3B3B;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 50px;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        font-size: 17px;
+        padding: 0;
+        right: 0;
+        cursor: pointer;
+        float: right;
+        margin-bottom: 30px;
+    }
+
+    #return_btn:hover {
+        background-color: #626262;
+    }
+
+    .forumFeedBack {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+        transition: all 0.5s ease-out;
+        z-index: 31;
+    }
+
+    .forumFeedBack.clicked {
+        visibility: visible;
+        transition: all 0.5s ease-out;
+        opacity: 1;
+    }
+
+    .feedBackContainer {
+        width: 330px;
+        height: 700px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        border-radius: 5px;
+    }
+
+    #feedBackUser {
+        width: 300px;
+        height: 640px;
+        margin-left: 25px;
+        margin-top: 30px;
+    }
+
+    .feedBackDetailBtn {
+        width: 30px;
+        height: 30px;
+        box-shadow: 1px 1px 5px gray;
+        display: inline-block;
+    }
+
+    #feedBackDetail {
+        width: 300px;
+        height: 640px;
+        box-shadow: 1px 1px 5px gray;
+        display: none;
+        margin-left: 20px;
+        margin-top: 35px;
+    }
+
+    .popupESCBtn {
+        font-size: 40px;
+        cursor: pointer;
+        width: 15px;
+        height: 30px;
+        position: absolute;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #feedBackESC {
+        top: 5px;
+        right: 10px;
+    }
+
+    #feedBackDetailESC {
+        top: 40px;
+        right: 20px;
+    }
+
+    #submitFeedBackBtn {
+        width: 100px;
+        height: 40px;
+        padding: 0;
+        border: 0;
+        border-radius: 5px;
+        background-color: #d2d2d2;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    #chatbtn {
+        position: relative;
+        top: 60px;
+        left: 100px;
+    }
+
+    #btn {
+        position: relative;
+        top: 60px;
+        left: 200px;
+    }
+
+    #btn2 {
+        position: relative;
+        top: 60px;
+        left: 170px;
+    }
+
+    #btn3 {
+        position: relative;
+        top: 60px;
+        left: 290px;
+    }
+
+    .popup_btn_search_btn {
+        background-color: #D2D2D2;
+        border: 1px solid black;
+        display: inline;
+        position: absolute;
+        left: 240px;
+        top: 61px;
+    }
+
+
+    #forum_map{
+    width:350px;
+    padding-left:10px;
+    margin-top:5px;
+}
+
+#map_content{
+    font-size:0px;
+}
+
+#map_content > p{
+    font-family:'Dongle', 'sans-serif';
+    font-size:35px;
+    line-height:35px;
+    color:black;
+}
+
+#map_content > span{
+    font-family:'Dongle', 'sans-serif';
+    font-size:20px;
+    line-height:25px;
+    color:black;
+}
+
+#map{
+    width: 330px;
+    height: 330px;
+    position: relative;
+    margin-top: 7px;
+    font-family: 'Dongle';
+    font-size: 25px;
+    line-height: 35px;
+    overflow: hidden;
+    background: url("http://t1.daumcdn.net/mapjsapi/images/bg_tile.png");
+}
+#forum_comment{
+    margin-left: 10px;
+    border: 1px solid #D2D2D2;
+    width: 330px;
+    margin-top: 20px;
+    font-size: 0;
+    font-family: 'Dongle','sans-serif';
+    padding-bottom: 10px;
+    word-break: break-all;
+}
+
+#forum_comment > form{
+    width:330px;
+}
+
+#forum_comment > form> p{
+    font-size: 25px;
+    text-align: left;
+    padding: 10px;
+    line-height: 25px;
+}
+
+#comment{
+    width: 200px;
+    height: 40px;
+    margin: 0px 10px 10px 10px;
+    font-size: 25px;
+    font-family: 'Dongle';
+    line-height: 25px;
+}
+.commentDiv {
+    width:300px;
+}
+.commentDiv > div{
+    width:250px;
+}
+.commentDiv > div{
+    width: 300px;
+}
+.forumCommentBtn{
+    background-color: #3B3B3B;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 25px;
+    line-height: 25px;
+    font-family: 'Dongle', 'sans-serif';
+    padding: 0;
+    right: 0;
+    cursor: pointer;
+}
+#forum_comment > form > input[type=text] {
+    width:250px;
+}
+
+
+
+.club_part_back {
+    display:none;
+}
+#forum_m {
+    display: block;
+}
+.forummem_mbtn {
+    position:absolute;
+    top:100px;
+    left:280px;
+}
+#layerPopup {
+    display: none;
+}
+
+#layerPopup + label {
+    display:inline-block;
+    padding: 7px 14px;
+    background:#333;
+    color:#fff;
+}
+
+#layer_bg {
+    display:none;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+}
+
+#layer_bg > #popup {
+    position:absolute;
+    padding:15px;
+    box-sizing:border-box;
+    border-radius:15px;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    width:300px;
+    height:700px;
+    overflow: auto;
+    background:#fff;
+    box-shadow: 7px 7px 5px rgba(0,0,0,0.2);
+}
+
+#layer_bg > #popup > h2 {
+    margin-bottom:25px;
+}
+
+#layer_bg > #popup > h2 > label {
+    float: right;
+}
+
+#layerPopup:checked + label + #layer_bg {
+    display:block;
+}
+#forummem_cencel {
+    margin-left:240px;
+    font-size: 25px;
+    font-weight: bold;
+}
+#forummem_checkbtn {
+    width: 70px;
+    height: 40px;
+    font-size:25px;
+    line-height:27px;
+    border:none;
+    border-radius: 5px;
+     font-family:'Dongle', 'sans-serif';
+    text-align:center;
+}
+}

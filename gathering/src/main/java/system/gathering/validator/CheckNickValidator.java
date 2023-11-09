@@ -1,0 +1,23 @@
+package system.gathering.validator;
+
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
+import org.springframework.validation.Errors;
+import system.gathering.object.User;
+import system.gathering.repository.user.JdbcUserRepository;
+import system.gathering.service.SignUp;
+
+@RequiredArgsConstructor
+@Component
+public class CheckNickValidator extends AbstractValidator<User>{
+
+    private final JdbcUserRepository jdbcUserRepository;
+    private final SignUp signUp;
+
+    @Override
+    protected void doValidate(User user, Errors errors) {
+        if(signUp.checkNickDuplication(user.getNickName()) && user.getNickName() != ""){
+            errors.rejectValue("nickName", "닉네임 중복", "닉네임 중복입니다");
+        }
+    }
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/mainform.css">
+    <link rel="stylesheet" type="text/css" href="/css/chatform.css">
+    <meta charset="UTF-8">
+    <title>Chating</title>
+</head>
+<body>
+<div id="container" class="container">
+    <input type="hidden" id="sessionId" value="">
+    <input type="hidden" id="roomNumber" th:value="${roomNumber}">
+    <input type="hidden" id="userName" th:value="${userName}">
+    <input type="hidden" id="chatContent" th:value="${chatContent}">
+
+    <div id="chating" class="chating">
+        <div th:each="chat : ${chatContent}">
+            <div class='chatBack' th:if="${#strings.equals(chat.getName(),userName)}">
+                <div class='me' th:text="${chat.getContent()}"></div>
+            </div>
+            <div class='chatBack' th:unless="${#strings.equals(chat.getName(),userName)}">
+                <div class='othersPro' th:text="${chat.getName()}"></div>
+                <div class='others' th:text="${chat.getContent()}"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="yourMsg">
+        <button onclick="send()" id="sendBtn">보내기</button>
+        <input id="chatting" placeholder="보내실 메시지를 입력하세요.">
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    var ws;
+
+    //function wsOpen(){
+    //웹소켓 전송시 현재 방의 번호를 넘겨서 보낸다.
+    ws = new WebSocket("ws://" + location.host + "/chating/"+$("#roomNumber").val());
+    // wsEvt();
+    // }
+
+    // function wsEvt() {
+    ws.onopen = function(data){
+        //소켓이 열리면 동작
+    }
+
+    ws.onmessage = function(data) {
+        //메시지를 받으면 동작
+        var msg = data.data;
+        if(msg != null && msg.trim() != ''){
+            var d = JSON.parse(msg);
+            if(d.type == "getId"){
+                var si = d.sessionId != null ? d.sessionId : "";
+                if(si != ''){
+                    $("#sessionId").val(si);
+                    $('#chating').scrollTop($('#chating')[0].scrollHeight);
+                }
+            }else if(d.type == "message"){
+                if(d.sessionId == $("#sessionId").val()){
+                    $("#chating").append("<div class='chatBack'><div class='me'>" + d.msg + "</div></div>");
+                    $('#chating').scrollTop($('#chating')[0].scrollHeight);
+                }else{
+                    $("#chating").append("<div class='chatBack'><div class='othersPro'>"+d.userName+"</div><div class='others'>" + d.msg + "</div></div>");
+                    $('#chating').scrollTop($('#chating')[0].scrollHeight);
+                }
+
+            }else{
+                console.warn("unknown type!")
+            }
+        }
+    }
+
+    document.addEventListener("keypress", function(e){
+        if(e.keyCode == 13){ //enter press
+            send();
+        }
+    });
+    // }
+
+    function chatName(){
+        var userName = $("#userName").val();
+        if(userName == null || userName.trim() == ""){
+            alert("사용자 이름을 입력해주세요.");
+            $("#userName").focus();
+        }else{
+            // wsOpen();
+            $("#yourName").hide();
+            $("#yourMsg").show();
+        }
+    }
+
+    function send() {
+        if($("#chatting").val() != "" && $("#chatting").val() != null){
+            var option ={
+                type: "message",
+                roomNumber: $("#roomNumber").val(),
+                sessionId : $("#sessionId").val(),
+                userName : $("#userName").val(),
+                msg : $("#chatting").val()
+            }
+            ws.send(JSON.stringify(option))
+            $('#chatting').val("");
+        }
+    }
+</script>
+</html>

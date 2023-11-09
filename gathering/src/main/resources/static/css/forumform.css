@@ -1,0 +1,270 @@
+/*메인 컨테이너 설정*/
+#ltContainer{
+    height:830px;
+}
+/*---------------------------------------------*/
+
+#forumWrap{
+    height:750px;
+}
+
+/*검색창 설정*/
+#searchWrap{
+    width: 920px;
+    height: 60px;
+    padding: 10px;
+    background-color: white;
+}
+
+#searchWrap > input{
+    width: 765px;
+    height: 40px;
+    border: none;
+    padding: 0;
+    margin-left: 20px;
+    float: left;
+    outline: none;
+    border-bottom: 1px solid #D2D2D2;
+    font-size: 25px;
+    font-family: 'Dongle', sans-serif;
+}
+
+#searchWrap > .search_btn > img{
+    display:block;
+    width:30px;
+    height:30px;
+}
+
+#searchWrap > div > img{
+    top:50%;
+    left:50%;
+    position:relative;
+    transform: translate(-50%, -50%);
+}
+
+#searchWrap > .search_btn{
+    width: 40px;
+    height:40px;
+    float:left;
+    border:0;
+    background-color:white;
+    margin-left:10px;
+}
+/*---------------------------------------------*/
+
+
+/*게시글 설정*/
+#ltForumWrap{
+    width: 920px;
+    height: 620px;
+    font-size: 0;
+    overflow: hidden;
+}
+
+#ltForumWrap::-webkit-scrollbar {
+  display: none;
+}
+
+.ltForumDiv{
+    width: 860px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px gray;
+    cursor: pointer;
+}
+
+.ltForumDiv div span{
+    font-family: 'Dongle', 'sans-serif';
+    color: black;
+}
+
+.ltForumTitle{
+    width:600px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.ltForumTitle > span{
+    font-size: 35px;
+    line-height: 35px;
+}
+
+.ltForumContent{
+    width: 500px;
+    height: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 7px 0px 7px 0px;
+}
+
+.ltForumContent span{
+    font-size:25px;
+    line-height: 25px;
+}
+
+.ltForumInfo span{
+    font-size:25px;
+    line-height: 25px;
+}
+/*---------------------------------------------*/
+
+
+/*버튼 랩 설정*/
+#ltButtonWrap{
+    height:70px;
+}
+/*---------------------------------------------*/
+
+
+/*페이지 리스트 설정*/
+#ltForumPageList{
+    width: 200px;
+    height: 60px;
+    margin-left: 30px;
+    display: inline-flex;
+    background-color: white;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.ltForumPageBtn{
+    width:40px;
+    height:60px;
+    font-family:'Dongle', 'sans-serif';
+    font-size:25px;
+    line-height:25px;
+    color:black;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+    text-decoration:none;
+}
+/*---------------------------------------------*/
+
+
+/*글쓰기 버튼 설정*/
+#ltForumAddBtn{
+    width: 80px;
+    height: 40px;
+    padding: 0;
+    border: 0;
+    border-radius: 5px;
+    background-color: #d2d2d2;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    position: absolute;
+    bottom: 35px;
+    right: 30px;
+}
+/*---------------------------------------------*/
+
+
+/*검색 옵션 설정*/
+.search_option_back{
+    width:100%;
+    height:100%;
+    background-color:rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    position:absolute;
+    top:0;
+    left:0;
+    visibility:hidden;
+    transition:all 0.5s ease-out;
+    z-index:31;
+}
+
+.search_option_back.clicked{
+    visibility:visible;
+    transition:all 0.5s ease-out;
+    opacity:1;
+}
+
+#search_option_wrap{
+    width: 500px;
+    height: 730px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#searchOptionOver{
+    width:500px;
+    height:650px;
+    overflow:scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#searchOptionOver::-webkit-scrollbar {
+    display: none;
+}
+
+.search_option_div{
+    margin-top:20px;
+    margin-left:75px;
+}
+
+.search_option_div > p{
+    font-family: 'Dongle';
+    font-size: 35px;
+    color: black;
+    line-height: 35px;
+}
+
+#search_option_wrap input{
+    width: 350px;
+    height:40px;
+    border:none;
+    padding: 0;
+    outline: none;
+    border-bottom: 1px solid #D2D2D2;
+    font-size:25px;
+    font-family: 'Dongle', sans-serif;
+}
+
+#search_option_btn{
+    background-color:#d2d2d2;
+    width:100px;
+    height:40px;
+    border:none;
+    border-radius:5px;
+    font-size:25px;
+    font-family: 'Dongle', sans-serif;
+    padding:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    right:0;
+    cursor:pointer;
+    margin-top:15px;
+    float:left;
+    margin-left:120px;
+}
+
+#search_option_back_btn{
+    background-color:#d2d2d2;
+    width:100px;
+    height:40px;
+    border:none;
+    border-radius:5px;
+    font-size:25px;
+    font-family: 'Dongle', sans-serif;
+    padding:0;
+    right:0;
+    cursor:pointer;
+    margin-top:15px;
+    float:left;
+    margin-left:40px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:black;
+}

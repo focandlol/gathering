@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<form id="search_option_wrap" th:object="${feedSearchCond}" th:action="@{/admin/feedback}" method="get">
+  <div class="search_option_div">
+    <p>이름</p>
+    <div class="search_option_div">
+      <select name="job" th:field="*{checking}">
+        <option th:each="check : ${checks}" th:text="${check.value}" th:value="${check}">완료</option>
+      </select>
+    </div>
+  </div>
+  <button id="club_search_btn" class="btn_10050" type="submit">검색</button>
+</form>
+<div class="mainContentWrap">
+  <div class="clubDiv" th:each="feedback : ${feedbacks}">
+    <p class="clubDivP" th:text="${feedback.id}"></p>
+    <p class="clubDivP" th:text="${feedback.user.userId}"></p>
+    <button class="btn_10050" th:myName="${feedback.id}" th:hName="${feedback.defendant.userId}" onclick="userOut(this.getAttribute('myName'),this.getAttribute('hName'))">확인</button>
+  </div>
+
+  <div id="clubButtonWrap">
+    <div id="clubPageList">
+            <span class="clubPageBtn" th:each="page : ${#numbers.sequence(startPage,endPage)}">
+                <a th:if="${page != nowPage}" th:href="@{/admin/feedback(page = ${page - 1}, checking = ${feedSearchCond.checking})}" th:text="${page}"></a>
+                <strong th:if="${page == nowPage}" th:text="${page}"></strong>
+            </span>
+    </div>
+  </div>
+</div>
+</body>
+<script>
+  function userOut(id,defendant){
+    console.log(id);
+    console.log(defendant);
+    let id1 = id;
+
+    $.ajax({
+      url : "/admin/feedback",
+      type : 'post',
+      data : {id : id,defendant : defendant},
+      success : function() { // controllor에서 list를 return 받았음
+        location.reload();
+      }
+    });
+
+  }
+</script>
+</html>

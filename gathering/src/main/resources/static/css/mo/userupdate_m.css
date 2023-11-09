@@ -1,0 +1,148 @@
+/*메인 컨테이너 설정*/
+@media(max-width:450px) {
+#userViewContainer{
+    width:350px;
+    height: 700px;
+    font-family: 'Dongle';
+    font-size: 25px;
+    line-height: 30px;
+}
+    input{
+    outline:none;
+    border:0;
+    border-bottom: 1px solid #D2D2D2;
+    padding:0;
+    margin:0;
+}
+
+#user_update_form{
+    width:350px;
+    height:680px;
+}
+
+#user_update_div{
+    width: 350px;
+    padding: 30px 0px 0px 30px;
+    background-color: white;
+    border-radius: 5px;
+    height: 670px;
+    box-shadow: 1px 1px 3px gray;
+}
+
+.error_wrap{
+    height:13px;
+    width:100%;
+    float:left;
+}
+
+.error_wrap > div{
+    text-align: left;
+}
+
+#forum_add_div > div{
+    float:left;
+}
+
+#forum_add_div > div > p{
+    text-align: left;
+    font-size:20px;
+}
+
+#forum_add_div > div > input{
+    height:29px;
+    float:left;
+}
+
+.forum_add_div_32{
+    width:300px;
+    margin-bottom: 10px;
+}
+
+.forum_add_div_31{
+    width:250px;
+    margin-bottom:10px;
+}
+
+.forum_add_div_31 > input{
+    width:250px;
+}
+
+.forum_add_div_full{
+    width:880px;
+}
+#name {
+    width:250px;
+}
+#password {
+    width:250px;
+}
+#subject{
+    width:250px;
+}
+
+#address_div > input{
+    margin-bottom:10px;
+}
+
+#postcode{
+    width:170px;
+}
+
+#find_address_btn{
+    background-color:#3B3B3B;
+    width:100px;
+    height:30px;
+    margin-left:20px;
+    border:0;
+    border-radius: 10px;
+    cursor:pointer;
+    color:white;
+}
+
+#find_address_btn:hover{
+    background-color:#626262;
+}
+
+#address{
+    margin-top:10px;
+    width:250px;
+}
+
+#detailAddress{
+    width:250px;
+}
+
+#extraAddress{
+    width:255px;
+    margin-left:20px;
+}
+
+#content{
+    height:398px;
+    width:868px;
+    border: 1px solid #D2D2D2;
+    padding:5px;
+    outline: none;
+    resize:none;
+}
+
+#submit_btn{
+    background-color: #3B3B3B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 25px;
+    font-family: 'Dongle', 'sans-serif';
+    padding: 0;
+    right: 0;
+    cursor: pointer;
+    float: left;
+    margin-top: 90px;
+    margin-left:200px;
+}
+}
