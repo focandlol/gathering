@@ -122,9 +122,7 @@
 #### Querydsl, ajax를 활용한 무한 스크롤 앨범 페이지
 #### no-offset 방식 사용
 
-
-**Requirements:**
-- Title must match repository, folder and package manager names - or it may have another, relevant title with the repository, folder, and package manager title next to it in italics and in parentheses. For instance:
+# 구성
 
   ```markdown
   # Standard Readme Style _(standard-readme)_
