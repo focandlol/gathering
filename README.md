@@ -38,7 +38,7 @@
 ![인덱스](https://github.com/focandlol/gathering/assets/50188319/9cd92420-161a-46df-9832-5c81d9c57e26)
 
 ![회가](https://github.com/focandlol/gathering/assets/50188319/b1925fe2-53bc-4267-be82-100adb90e64a)
-
+![gmail](https://github.com/focandlol/gathering/assets/50188319/460d0b6e-e935-4551-88ce-7bad71143842)
 
 **Requirements:**
 - Title must match repository, folder and package manager names - or it may have another, relevant title with the repository, folder, and package manager title next to it in italics and in parentheses. For instance:
