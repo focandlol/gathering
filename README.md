@@ -37,7 +37,7 @@
 # 구성
 ![인덱스](https://github.com/focandlol/gathering/assets/50188319/9cd92420-161a-46df-9832-5c81d9c57e26)
 
-![image](https://github.com/focandlol/gathering/assets/50188319/42a3ca0b-18cc-46fd-a37e-2dffed10d0a0)
+![회가](https://github.com/focandlol/gathering/assets/50188319/b1925fe2-53bc-4267-be82-100adb90e64a)
 
 
 **Requirements:**
