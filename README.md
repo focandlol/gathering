@@ -80,6 +80,8 @@
 #### 모임 종료 후 불참 및 불량 인원 신고
 #### 관리자 확인 후 신고 인원 매너 점수 하락
 
+![동호회 외부](https://github.com/focandlol/gathering/assets/50188319/1dd73cc9-b534-4389-9087-270f04c35397)
+
 **Requirements:**
 - Title must match repository, folder and package manager names - or it may have another, relevant title with the repository, folder, and package manager title next to it in italics and in parentheses. For instance:
 
