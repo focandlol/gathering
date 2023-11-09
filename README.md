@@ -1,3 +1,4 @@
+![세모](https://github.com/focandlol/gathering/assets/50188319/41a23c0d-8be3-4ea8-be22-6f1c8d328a1b)
 # 소개
 
 > 세모는 모임을 운영하고자 하는 사용자들과 모임에 참여하고자 하는 사용자들을 대상으로 하는 웹 어플리케이션 입니다.
