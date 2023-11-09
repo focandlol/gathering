@@ -11,7 +11,7 @@
 
 또한 매너등급 시스템, 호스트의 초대를 통한 참여 기능과 피드백 기능을 통해 모임이 파투 날 확률을 줄이고 사용자에게 깨끗한 모임 환경을 제공.
 ```
-
+</br></br></br>
 
 # 기능
 ### 사용자 기능
@@ -32,7 +32,7 @@
 > ##### 1.관리자 페이지
 ![구성3](https://github.com/focandlol/gathering/assets/50188319/764dc9a4-fbb3-4b7f-a3c7-790b6d0c372f)
 
-
+</br></br></br>
 
 # 구성
 
@@ -104,13 +104,23 @@
 
 </br></br></br>
 
-> ### 10. 동호회 공지사항 페이지
+> ### 11. 동호회 공지사항 페이지
 ![공지사항](https://github.com/focandlol/gathering/assets/50188319/755e65e9-cb34-4091-b8ce-23bdd417b03d)
 #### CRUD
 #### 알림사항 및 중요사항 작성
 
-![동호회 채팅](https://github.com/focandlol/gathering/assets/50188319/2e970005-c7d8-4eb7-bdcd-3175cd8bc408)
+</br></br></br>
 
+> ### 12. 동호회 채팅
+![동호회 채팅](https://github.com/focandlol/gathering/assets/50188319/2e970005-c7d8-4eb7-bdcd-3175cd8bc408)
+#### Spring websocket, socketjs를 활용한 모임 참가자들 간 채팅방
+
+</br></br></br>
+
+> ### 13. 동호회 앨범
+![앨범](https://github.com/focandlol/gathering/assets/50188319/398bb700-d67a-4786-8f27-4c18a8b2cb94)
+#### Querydsl, ajax를 활용한 무한 스크롤 앨범 페이지
+#### no-offset 방식 사용
 
 
 **Requirements:**
