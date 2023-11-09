@@ -64,7 +64,7 @@
 
 > ### 5. 번개 게시글
 ![번개 내부](https://github.com/focandlol/gathering/assets/50188319/73e86dc0-4fc3-4bf9-a81b-560de97206a5)
-#### 회원 관리, 댓글을 통한 가입 요청 및 신청자 프로필 확인 후 초대
+#### 회원 관리, 댓글을 통한 가입 요청 및 신청자 프로필에서 매너 점수 확인 후 초대
 #### kakao map api를 이용하여 모임 위치 지도에 마킹
 
 </br></br></br>
@@ -73,6 +73,12 @@
 ![채팅방](https://github.com/focandlol/gathering/assets/50188319/d7c5b3d5-d8db-4e9b-963f-bed488a86d0b)
 #### Spring websocket, socketjs를 활용한 모임 참가자들 간 채팅방
 
+</br></br></br>
+
+> ### 7. 피드백
+![피드백](https://github.com/focandlol/gathering/assets/50188319/b891ab67-b4fd-40c0-8c35-322ade5ccd1b)
+#### 모임 종료 후 불참 및 불량 인원 신고
+#### 관리자 확인 후 신고 인원 매너 점수 하락
 
 **Requirements:**
 - Title must match repository, folder and package manager names - or it may have another, relevant title with the repository, folder, and package manager title next to it in italics and in parentheses. For instance:
