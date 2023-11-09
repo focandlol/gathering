@@ -13,14 +13,21 @@
 ```
 
 # 구성
-### 사용자
+### 사용자 기능
+<span style="color:red"> red </span>
 
 ![메인](https://github.com/focandlol/gathering/assets/50188319/d5e1dfdd-d486-40f2-9d82-1a6ee0553f92)
+------------------
+##### 2.번게 게시판
 
+![번개1](https://github.com/focandlol/gathering/assets/50188319/a9eb03cc-4826-49dc-99e5-0c5b02377daa)
 ![번개](https://github.com/focandlol/gathering/assets/50188319/9606e337-7117-421a-86b4-4a858731b905)
-
+------------------
+##### 3.동호회 게시판
 ![동호회](https://github.com/focandlol/gathering/assets/50188319/506be925-a811-43bb-99b5-600887d6d8cf)
-### 관리자
+------------------
+### 관리자 기능
+##### 1.관리자 페이지
 ![구성3](https://github.com/focandlol/gathering/assets/50188319/764dc9a4-fbb3-4b7f-a3c7-790b6d0c372f)
 
 
