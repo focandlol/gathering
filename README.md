@@ -20,12 +20,12 @@
 
 ![메인](https://github.com/focandlol/gathering/assets/50188319/d5e1dfdd-d486-40f2-9d82-1a6ee0553f92)
 ------------------
-> ##### 2.번게 게시판
+> ##### 2.번게 게시판(순간적인 모임)
 
 ![번개1](https://github.com/focandlol/gathering/assets/50188319/a9eb03cc-4826-49dc-99e5-0c5b02377daa)
 ![번개](https://github.com/focandlol/gathering/assets/50188319/9606e337-7117-421a-86b4-4a858731b905)
 ------------------
-> ##### 3.동호회 게시판
+> ##### 3.동호회 게시판(지속적인 모임)
 ![동호회](https://github.com/focandlol/gathering/assets/50188319/506be925-a811-43bb-99b5-600887d6d8cf)
 ------------------
 ### 관리자 기능
@@ -50,6 +50,7 @@
 
 > ### 3. 프로필
 ![프로필](https://github.com/focandlol/gathering/assets/50188319/eb1637fe-1392-4590-b501-76b34191e8f0)
+#### CRUD
 #### 매너 점수 확인 및 프로필 이미지 변경 기능
 #### 현재 참가중인 번개 모임, 동호회 확인 및 즉시 이동
 
@@ -64,6 +65,7 @@
 
 > ### 5. 번개 게시글
 ![번개 내부](https://github.com/focandlol/gathering/assets/50188319/73e86dc0-4fc3-4bf9-a81b-560de97206a5)
+#### CRUD
 #### 회원 관리, 댓글을 통한 가입 요청 및 신청자 프로필에서 매너 점수 확인 후 초대
 #### kakao map api를 이용하여 모임 위치 지도에 마킹
 
@@ -80,14 +82,32 @@
 #### 모임 종료 후 불참 및 불량 인원 신고
 #### 관리자 확인 후 신고 인원 매너 점수 하락
 
+</br></br></br>
+
+> ### 8. 동호회 게시판 
 ![동호회 외부](https://github.com/focandlol/gathering/assets/50188319/1dd73cc9-b534-4389-9087-270f04c35397)
+#### 동호회를 위한 게시판
+#### 게시글 검색 기능 및 페이징
 
+</br></br></br>
+
+> ### 9. 동호회 게시글 
 ![동호회 내부](https://github.com/focandlol/gathering/assets/50188319/2bcccee1-ebbc-4c66-ab0e-7d2c216eaa44)
+#### CRUD
+#### 회원 관리 기능
 
+</br></br></br>
+
+> ### 10. 동호회 가입 신청 페이지
 ![가입 신청](https://github.com/focandlol/gathering/assets/50188319/cb63c9fe-311d-4757-90a5-5d8db0969dcf)
+#### 가입 요청 및 신청자 프로필에서 매너 점수 확인 후 초대
 
+</br></br></br>
+
+> ### 10. 동호회 공지사항 페이지
 ![공지사항](https://github.com/focandlol/gathering/assets/50188319/755e65e9-cb34-4091-b8ce-23bdd417b03d)
-
+#### CRUD
+#### 알림사항 및 중요사항 작성
 
 **Requirements:**
 - Title must match repository, folder and package manager names - or it may have another, relevant title with the repository, folder, and package manager title next to it in italics and in parentheses. For instance:
