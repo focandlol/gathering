@@ -36,8 +36,8 @@
 
 # 구성
 
-### Title
-**Status:** Required.
+![image](https://github.com/focandlol/gathering/assets/50188319/42a3ca0b-18cc-46fd-a37e-2dffed10d0a0)
+
 
 **Requirements:**
 - Title must match repository, folder and package manager names - or it may have another, relevant title with the repository, folder, and package manager title next to it in italics and in parentheses. For instance:
