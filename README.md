@@ -13,11 +13,13 @@
 ```
 
 # 구성
+### 사용자
+
 ![구성1](https://github.com/focandlol/gathering/assets/50188319/3950de9b-26bd-4864-8ce2-65a949f70eef)
 ![번개](https://github.com/focandlol/gathering/assets/50188319/9606e337-7117-421a-86b4-4a858731b905)
 
 ![동호회](https://github.com/focandlol/gathering/assets/50188319/506be925-a811-43bb-99b5-600887d6d8cf)
-
+### 관리자
 ![구성3](https://github.com/focandlol/gathering/assets/50188319/764dc9a4-fbb3-4b7f-a3c7-790b6d0c372f)
 
 
