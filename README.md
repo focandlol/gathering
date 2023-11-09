@@ -50,22 +50,38 @@
 </br></br></br>
 
 # 구성
-
+ 
 > ### 1.index페이지
+
+<div align="center">
+ 
 ![인덱스](https://github.com/focandlol/gathering/assets/50188319/9cd92420-161a-46df-9832-5c81d9c57e26)  
+
+</div>
+
 #### 카테고리별 모임 게시글 이동, 최신순으로 모임 노출 및 바로가기 
 ------------------
 </br></br></br>
 
 > ### 2. 회원가입
+
+<div align="center">
+ 
 ![회가](https://github.com/focandlol/gathering/assets/50188319/b1925fe2-53bc-4267-be82-100adb90e64a)
 ![gmail](https://github.com/focandlol/gathering/assets/50188319/460d0b6e-e935-4551-88ce-7bad71143842)
+</div>
+
 #### Java Mail Sender를 이용한 이메일 인증, 카카오 주소 api를 이용한 주소 찾기 기능
 ------------------
 </br></br></br>
 
 > ### 3. 프로필
+
+<div align="center">
+ 
 ![프로필](https://github.com/focandlol/gathering/assets/50188319/eb1637fe-1392-4590-b501-76b34191e8f0)
+</div>
+
 #### CRUD
 #### 매너 점수 확인 및 프로필 이미지 변경 기능
 #### 현재 참가중인 번개 모임, 동호회 확인 및 즉시 이동
@@ -73,14 +89,24 @@
 </br></br></br>
 
 > ### 4. 번개 게시판
+
+<div align="center">
+ 
 ![번개 게시판](https://github.com/focandlol/gathering/assets/50188319/4ef8c0af-3dcf-4aba-a313-0984044ca04a)
+</div>
+
 #### 번개 모임을 위한 게시판
 #### 게시글 검색 기능 및 페이징
 ------------------
 </br></br></br>
 
 > ### 5. 번개 게시글
+
+<div align="center">
+ 
 ![번개 내부](https://github.com/focandlol/gathering/assets/50188319/73e86dc0-4fc3-4bf9-a81b-560de97206a5)
+</div>
+
 #### CRUD
 #### 회원 관리, 댓글을 통한 가입 요청 및 신청자 프로필에서 매너 점수 확인 후 초대
 #### kakao map api를 이용하여 모임 위치 지도에 마킹
@@ -88,76 +114,127 @@
 </br></br></br>
 
 > ### 6. 번개 모임 채팅방
-![채팅방](https://github.com/focandlol/gathering/assets/50188319/d7c5b3d5-d8db-4e9b-963f-bed488a86d0b)
+<div align="center">
+ 
+![채팅방](https://github.com/focandlol/gathering/assets/50188319/d7c5b3d5-d8db-4e9b-963f-bed488a86d0b) 
+</div>
+
 #### Spring websocket, socketjs를 활용한 모임 참가자들 간 채팅방
 ------------------
 </br></br></br>
 
 > ### 7. 피드백
+
+<div align="center">
+ 
 ![피드백](https://github.com/focandlol/gathering/assets/50188319/b891ab67-b4fd-40c0-8c35-322ade5ccd1b)
+</div>
+
 #### 모임 종료 후 불참 및 불량 인원 신고
 #### 관리자 확인 후 신고 인원 매너 점수 하락
 ------------------
 </br></br></br>
 
-> ### 8. 동호회 게시판 
+> ### 8. 동호회 게시판
+
+<div align="center">
+ 
 ![동호회 외부](https://github.com/focandlol/gathering/assets/50188319/1dd73cc9-b534-4389-9087-270f04c35397)
+</div>
+
 #### 동호회를 위한 게시판
 #### 게시글 검색 기능 및 페이징
 ------------------
 </br></br></br>
 
-> ### 9. 동호회 게시글 
+> ### 9. 동호회 게시글
+
+<div align="center">
+ 
 ![동호회 내부](https://github.com/focandlol/gathering/assets/50188319/2bcccee1-ebbc-4c66-ab0e-7d2c216eaa44)
+</div>
+
 #### CRUD
 #### 회원 관리 기능
 ------------------
 </br></br></br>
 
 > ### 10. 동호회 가입 신청 페이지
+
+<div align="center">
+ 
 ![가입 신청](https://github.com/focandlol/gathering/assets/50188319/cb63c9fe-311d-4757-90a5-5d8db0969dcf)
+</div>
+
 #### 가입 요청 및 신청자 프로필에서 매너 점수 확인 후 초대
 ------------------
 </br></br></br>
 
 > ### 11. 동호회 공지사항 페이지
+
+<div align="center">
+ 
 ![공지사항](https://github.com/focandlol/gathering/assets/50188319/755e65e9-cb34-4091-b8ce-23bdd417b03d)
+</div>
+
 #### CRUD
 #### 알림사항 및 중요사항 작성
 ------------------
 </br></br></br>
 
 > ### 12. 동호회 채팅
+
+<div align="center">
+ 
 ![동호회 채팅](https://github.com/focandlol/gathering/assets/50188319/2e970005-c7d8-4eb7-bdcd-3175cd8bc408)
+</div>
+
 #### Spring websocket, socketjs를 활용한 모임 참가자들 간 채팅방
 ------------------
 </br></br></br>
 
 > ### 13. 동호회 앨범
+
+<div align="center">
+ 
 ![앨범](https://github.com/focandlol/gathering/assets/50188319/398bb700-d67a-4786-8f27-4c18a8b2cb94)
+</div>
+
 #### Querydsl, ajax를 활용한 무한 스크롤 앨범 페이지
 #### no-offset 방식 사용
 ------------------
 </br></br></br>
 
 > ### 14. 반응형 모바일 웹
+
+<div align="center">
+ 
 ![모바일](https://github.com/focandlol/gathering/assets/50188319/4f6e26cc-aaec-448b-a30d-74d9332a80c9)
 ![모동](https://github.com/focandlol/gathering/assets/50188319/52908bf6-3cc2-419e-8afc-e964f55103f9)
 ![모번](https://github.com/focandlol/gathering/assets/50188319/8c4ba4eb-167e-487c-a886-84051491313d)
-
-
+</div>
 
 #### 모바일에서도 이용 가능
 ------------------
 </br></br></br>
 
 # 프로젝트 아키텍처
+<div align="center">
+ 
 ![프로젝트 아키텍처](https://github.com/focandlol/gathering/assets/50188319/1fcdd3a9-3fe4-4db3-91ec-e03383d71356)
+
+</div>
+
 ------------------
 </br></br>
 
 # ERD
+<div align="center">
+ 
 ![erd](https://github.com/focandlol/gathering/assets/50188319/593d4fce-3d18-46c8-bb83-4363a1f1403b)
+
+</div>
+
  ------------------
   
  
