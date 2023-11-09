@@ -127,6 +127,12 @@
 # 프로젝트 아키텍처
 ![프로젝트 아키텍처](https://github.com/focandlol/gathering/assets/50188319/1fcdd3a9-3fe4-4db3-91ec-e03383d71356)
 ------------------
+</br></br>
+
+# ERD
+![erd](https://github.com/focandlol/gathering/assets/50188319/593d4fce-3d18-46c8-bb83-4363a1f1403b)
+ ------------------
+  
   ```markdown
   # Standard Readme Style _(standard-readme)_
   ```
