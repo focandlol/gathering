@@ -37,7 +37,7 @@
 ------------------
 > ##### 2.번게 게시판(순간적인 모임)
 
-![번개1](https://github.com/focandlol/gathering/assets/50188319/a9eb03cc-4826-49dc-99e5-0c5b02377daa)
+![번1](https://github.com/focandlol/gathering/assets/50188319/585b6d29-0b4b-4945-9ca5-7fc8f3d5508c)
 ![번개](https://github.com/focandlol/gathering/assets/50188319/9606e337-7117-421a-86b4-4a858731b905)
 ------------------
 > ##### 3.동호회 게시판(지속적인 모임)
