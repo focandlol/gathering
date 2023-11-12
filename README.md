@@ -206,16 +206,15 @@
 </br></br></br>
 
 > ### 14. 반응형 모바일 웹
+
+<div align="center">
+
 ![모바일](https://github.com/focandlol/gathering/assets/50188319/c240b61b-9af4-4231-a909-2d0f48c89698)
 ![모동](https://github.com/focandlol/gathering/assets/50188319/9194f6ef-8235-4a26-9d4e-048fe6f3b217)
+![모번](https://github.com/focandlol/gathering/assets/50188319/e6db50fe-be54-48a9-88bc-f051ffbe510f)
 
- 
-![모바일](https://github.com/focandlol/gathering/assets/50188319/4f6e26cc-aaec-448b-a30d-74d9332a80c9)
-![모동](https://github.com/focandlol/gathering/assets/50188319/52908bf6-3cc2-419e-8afc-e964f55103f9)
-![모번](https://github.com/focandlol/gathering/assets/50188319/8c4ba4eb-167e-487c-a886-84051491313d)
+</div>
 
-
-#### 모바일에서도 이용 가능
 ------------------
 </br></br></br>
 
