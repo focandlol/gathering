@@ -228,7 +228,7 @@
 ------------------
 </br></br>
 
-# 프로젝트 아키텍처
+# 서비스 아키텍처
 <div align="center">
  
 ![서비스 아키텍처](https://github.com/focandlol/gathering/assets/50188319/25eb105b-35c8-49d5-b29c-f00ea28386d1)
