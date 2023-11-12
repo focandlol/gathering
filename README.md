@@ -41,7 +41,7 @@
 ![번개](https://github.com/focandlol/gathering/assets/50188319/9606e337-7117-421a-86b4-4a858731b905)
 ------------------
 > ##### 3.동호회 게시판(지속적인 모임)
-![동호회](https://github.com/focandlol/gathering/assets/50188319/506be925-a811-43bb-99b5-600887d6d8cf)
+![동1](https://github.com/focandlol/gathering/assets/50188319/0cad8c82-cecb-48a1-8c7e-ed11ed9e7329)
 ------------------
 ### 관리자 기능
 > ##### 1.관리자 페이지
