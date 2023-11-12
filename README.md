@@ -207,7 +207,7 @@
 
 > ### 14. 반응형 모바일 웹
 ![모바일](https://github.com/focandlol/gathering/assets/50188319/c240b61b-9af4-4231-a909-2d0f48c89698)
-
+![모동](https://github.com/focandlol/gathering/assets/50188319/9194f6ef-8235-4a26-9d4e-048fe6f3b217)
 
  
 ![모바일](https://github.com/focandlol/gathering/assets/50188319/4f6e26cc-aaec-448b-a30d-74d9332a80c9)
