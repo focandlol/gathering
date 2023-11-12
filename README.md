@@ -206,6 +206,7 @@
 </br></br></br>
 
 > ### 14. 반응형 모바일 웹
+![모바일](https://github.com/focandlol/gathering/assets/50188319/c240b61b-9af4-4231-a909-2d0f48c89698)
 
 
  
