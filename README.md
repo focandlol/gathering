@@ -1,7 +1,7 @@
 
 
 ![세모](https://github.com/focandlol/gathering/assets/50188319/41a23c0d-8be3-4ea8-be22-6f1c8d328a1b)
-## [바로가기](http://3.35.218.85:8080)
+# [바로가기](http://3.35.218.85:8080)
 
 # 소개
 
