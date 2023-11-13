@@ -119,7 +119,7 @@
 ![채팅방](https://github.com/focandlol/gathering/assets/50188319/d7c5b3d5-d8db-4e9b-963f-bed488a86d0b) 
 </div>
 
-#### Spring websocket, socketjs를 활용한 모임 참가자들 간 채팅방
+#### Spring websocket을 활용한 모임 참가자들 간 채팅방
 ------------------
 </br></br></br>
 
@@ -189,7 +189,7 @@
 ![동호회 채팅](https://github.com/focandlol/gathering/assets/50188319/2e970005-c7d8-4eb7-bdcd-3175cd8bc408)
 </div>
 
-#### Spring websocket, socketjs를 활용한 모임 참가자들 간 채팅방
+#### Spring websocket을 활용한 모임 참가자들 간 채팅방
 ------------------
 </br></br></br>
 
