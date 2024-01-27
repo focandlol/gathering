@@ -44,7 +44,7 @@
         <div class="club_img_div">
             <img th:src="|/images/${club.getStoreFile()}|">
         </div>
-        <div id="forum_content" style="white-space: pre;" th:text="${club.intro}"></div>
+        <div id="forum_content" th:text="${club.intro}"></div>
     </div>
 
     <button id="club_edit_btn" th:if="${#strings.equals(user.userId,club.host.userId)} "th:onclick="|location.href='@{/club/update/{clubId}(clubId=${club.clubId})}'|"

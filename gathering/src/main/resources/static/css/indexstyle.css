@@ -792,7 +792,8 @@ h1,h2,h3,h4,h5,h6 {
     display:none;
 }
 #slide_menu {
-    margin-left:656px;
+    position:absolute;
+    right:30px;
 }
 #logo_img{
   width:130px;

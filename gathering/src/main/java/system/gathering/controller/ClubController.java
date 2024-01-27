@@ -50,9 +50,9 @@ public class ClubController {
     @GetMapping("/club/add")
     public String addClubForm(@ModelAttribute AddClub club,@SessionAttribute(name = SessionConst.LOGIN_MEMBER, required = false) User loginUser, Model model){
        // List<Chatting> club39 = clubService.findChat("club39");
-
-       // log.info("club39={}",club39);
-        model.addAttribute("user",loginUser);
+        User user = userRepository.findById(loginUser.getUserId());
+        // log.info("club39={}",club39);
+        model.addAttribute("user",user);
         Category[] values = Category.values();
         model.addAttribute("categories",values);
         return "clubAddForm";
@@ -135,7 +135,8 @@ public class ClubController {
         }
 
         HttpSession session = request.getSession(false);
-        User user = (User)session.getAttribute(SessionConst.LOGIN_MEMBER);
+        User user2 = (User)session.getAttribute(SessionConst.LOGIN_MEMBER);
+        User user = userRepository.findById(user2.getUserId());
         model.addAttribute("user",user);
         model.addAttribute("searchHost",clubSearchCond.getHost());
         model.addAttribute("searchSubject",clubSearchCond.getClubName());
@@ -187,11 +188,11 @@ public class ClubController {
         Optional<Club> findClub = clubService.findById(clubId);
         Club club = findClub.get();
         List<ClubParticipant> participants = clubService.findJoinParticipant(clubId);
-
+        User user = userRepository.findById(loginUser.getUserId());
         model.addAttribute("parts",participants);
         model.addAttribute("club",club);
         model.addAttribute("userId",loginUser.getUserId());
-        model.addAttribute("user",loginUser);
+        model.addAttribute("user",user);
 
 
         return "clubIn";
@@ -219,7 +220,9 @@ public class ClubController {
         //ClubParticipant cp = clubParticipant.get();
         log.info("ggggggggggggggggggggg");
         log.info("clubParticipant={}",clubParticipant);
-        model.addAttribute("user",loginUser);
+
+        User user = userRepository.findById(loginUser.getUserId());
+        model.addAttribute("user",user);
         if(clubParticipant.isEmpty()){
 
             model.addAttribute("join","unjoin");
@@ -252,7 +255,8 @@ public class ClubController {
     @GetMapping("/notice/add/{clubId}")
     public String noticeAddForm(@PathVariable Long clubId, @ModelAttribute Notice notice,@SessionAttribute(name = SessionConst.LOGIN_MEMBER, required = false) User loginUser,Model model){
         log.info("notice hi1 = {}",clubId);
-        model.addAttribute("user",loginUser);
+        User user = userRepository.findById(loginUser.getUserId());
+        model.addAttribute("user",user);
         return "noticeAddForm";
     }
 
@@ -291,7 +295,8 @@ public class ClubController {
             int endPage = Math.min(nowPage + 2,notices.getTotalPages());
             model.addAttribute("endPage",endPage+1);
         }
-        model.addAttribute("user",loginUser);
+        User user = userRepository.findById(loginUser.getUserId());
+        model.addAttribute("user",user);
         model.addAttribute("nowPage",nowPage);
         model.addAttribute("startPage",startPage);
         model.addAttribute("clubId",clubId);
@@ -304,9 +309,10 @@ public class ClubController {
     @GetMapping("/noticeIn/{noticeId}")
     public String noticeIn(@PathVariable Long noticeId, Model model,@SessionAttribute(name = SessionConst.LOGIN_MEMBER, required = false) User loginUser){
         log.info("qwe123qwe123qwe123");
+        User user = userRepository.findById(loginUser.getUserId());
         Optional<Notice> findNotice = clubService.findByNoticeId(noticeId);
         Notice notice = findNotice.get();
-        model.addAttribute("user",loginUser);
+        model.addAttribute("user",user);
         model.addAttribute("notice",notice);
         return "noticeIn";
     }
@@ -315,7 +321,8 @@ public class ClubController {
     public String clubUpdateForm(@PathVariable Long clubId, Model model, @SessionAttribute(name = SessionConst.LOGIN_MEMBER, required = false) User loginUser){
         Optional<Club> findClub = clubService.findById(clubId);
         Club club = findClub.get();
-        model.addAttribute("user",loginUser);
+        User user = userRepository.findById(loginUser.getUserId());
+        model.addAttribute("user",user);
         model.addAttribute("club",club);
         return "clubUpdateForm";
     }
@@ -343,7 +350,8 @@ public class ClubController {
                                     direction = Sort.Direction.DESC) Pageable pageable,
                             @SessionAttribute(name = SessionConst.LOGIN_MEMBER, required = false) User loginUser) throws MalformedURLException {
         model.addAttribute("clubId",clubId);
-        model.addAttribute("user",loginUser);
+        User user = userRepository.findById(loginUser.getUserId());
+        model.addAttribute("user",user);
         Club club = clubService.findById(clubId).get();
 
         Slice<Album> albums = clubService.findAlbum(club, pageable, null);
@@ -390,7 +398,8 @@ public class ClubController {
 
     @GetMapping("/club/album/add/{clubId}")
     public String albumAddForm(@ModelAttribute AlbumForm albumForm,@SessionAttribute(name = SessionConst.LOGIN_MEMBER, required = false) User loginUser, Model model){
-        model.addAttribute("user",loginUser);
+        User user = userRepository.findById(loginUser.getUserId());
+        model.addAttribute("user",user);
         return "albumAddForm";
     }
 

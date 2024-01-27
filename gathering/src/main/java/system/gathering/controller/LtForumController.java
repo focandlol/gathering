@@ -57,7 +57,8 @@ public class LtForumController {
         log.info("state={}",state);
 
         HttpSession session = request.getSession(false);
-        User user = (User)session.getAttribute(SessionConst.LOGIN_MEMBER);
+        User user2 = (User)session.getAttribute(SessionConst.LOGIN_MEMBER);
+        User user = userRepository.findById(user2.getUserId());
         model.addAttribute("user",user);
         int a = 0;
        /* if(host == "" && subject == "" && content =="" && state == "ing") {
@@ -115,7 +116,8 @@ public class LtForumController {
                             HttpServletRequest request){
 
         HttpSession session = request.getSession(false);
-        User user = (User)session.getAttribute(SessionConst.LOGIN_MEMBER);
+        User user2 = (User)session.getAttribute(SessionConst.LOGIN_MEMBER);
+        User user = userRepository.findById(user2.getUserId());
         model.addAttribute("user",user);
         //String userId = user.getUserId();
        // model.addAttribute("userId",userId);
@@ -196,10 +198,10 @@ public class LtForumController {
 
     @GetMapping("/add")
     public String addForm(@ModelAttribute LtForum forum,Model model,@SessionAttribute(name = SessionConst.LOGIN_MEMBER, required = false) User loginUser){
-
+        User user = userRepository.findById(loginUser.getUserId());
         Category[] values = Category.values();
         model.addAttribute("categories",values);
-        model.addAttribute("user",loginUser);
+        model.addAttribute("user",user);
         return "ltForumAddForm";
     }
 
@@ -260,11 +262,12 @@ public class LtForumController {
     @GetMapping("/ltforum/edit/{forumId}")
     public String updateForm(@PathVariable Long forumId,Model model,@SessionAttribute(name = SessionConst.LOGIN_MEMBER, required = false) User loginUser,
                              @ModelAttribute UpdateLtForum updateLtForum){
+        User user = userRepository.findById(loginUser.getUserId());
         LtForum findForum = ltForumService.findById(forumId);
         Category[] values = Category.values();
         model.addAttribute("categories",values);
         model.addAttribute("ltForum",findForum);
-        model.addAttribute("user",loginUser);
+        model.addAttribute("user",user);
         return "ltForumUpdateForm";
     }
 

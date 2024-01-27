@@ -16,6 +16,7 @@ import system.gathering.object.User;
 import system.gathering.object.club.Club;
 import system.gathering.repository.club.ClubRp;
 import system.gathering.repository.forum.ForumRp;
+import system.gathering.repository.user.UserRepository;
 
 import java.util.List;
 
@@ -26,29 +27,31 @@ public class HomeController {
 
     private final ForumRp forumRp;
     private final ClubRp clubRp;
+    private final UserRepository userRepository;
 
     @GetMapping("/")
-    public String home(@SessionAttribute(name = SessionConst.LOGIN_MEMBER, required = false) User loginUser,
+    public String home(
                        HttpServletRequest request, Model model) {
-        // HttpSession session = request.getSession(false);
-        //log.info("session = {}",session);
-       /* if(session == null){
+         HttpSession session = request.getSession(false);
+        log.info("session = {}",session);
+        if(session == null){
             model.addAttribute("user",null);
             return "index";
         }
 
         User loginUser = (User)session.getAttribute(SessionConst.LOGIN_MEMBER);
-        model.addAttribute("user",loginUser);
-        return "index";
-    }*/
+
         List<Club> clubs = clubRp.indexClub();
         List<LtForum> ltForums = forumRp.indexLtForum();
+
+        User findUser = userRepository.findById(loginUser.getUserId());
+
 
         Category[] values = Category.values();
         model.addAttribute("categories",values);
         model.addAttribute("ltForums",ltForums);
         model.addAttribute("clubs",clubs);
-        model.addAttribute("user", loginUser);
+        model.addAttribute("user", findUser);
         log.info("user = {}",loginUser);
         return "index";
     }

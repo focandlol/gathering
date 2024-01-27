@@ -60,6 +60,8 @@
     font-size: 25px;
     line-height: 25px;
     color: black;
+    white-space: pre-line;
+    word-wrap: break-word;
 }
 
 .club_part_back {

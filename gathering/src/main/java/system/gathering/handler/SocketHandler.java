@@ -1,5 +1,6 @@
 package system.gathering.handler;
 
+import lombok.extern.slf4j.Slf4j;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -8,15 +9,19 @@ import org.springframework.web.socket.CloseStatus;
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.socket.handler.TextWebSocketHandler;
+import system.gathering.SessionConst;
 import system.gathering.object.Chat;
+import system.gathering.object.User;
 import system.gathering.repository.user.JdbcUserRepository;
 
 import java.io.IOException;
+import java.net.http.WebSocket;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 @Component
+@Slf4j
 public class SocketHandler extends TextWebSocketHandler {
 
     List<HashMap<String, Object>> rls = new ArrayList<>(); //웹소켓 세션을 담아둘 리스트 ---roomListSessions
@@ -32,6 +37,7 @@ public class SocketHandler extends TextWebSocketHandler {
         //메시지 발송
         String msg = message.getPayload();
         JSONObject obj = jsonToObjectParser(msg);
+
 
 
         String url = session.getUri().toString();
@@ -57,6 +63,7 @@ public class SocketHandler extends TextWebSocketHandler {
                 }
 
                 WebSocketSession wss = (WebSocketSession) temp.get(k);
+
                 if(wss != null) {
                     try {
                         wss.sendMessage(new TextMessage(obj.toJSONString()));
@@ -76,7 +83,13 @@ public class SocketHandler extends TextWebSocketHandler {
     @Override
     public void afterConnectionEstablished(WebSocketSession session) throws Exception {
         //소켓 연결
+        log.info("afterconnect");
+        //log.info(String.valueOf(session));
+        System.out.println("session = " + session);
+        User o = (User)session.getAttributes().get(SessionConst.LOGIN_MEMBER);
+        System.out.println("o = " + o);
         super.afterConnectionEstablished(session);
+
         boolean flag = false;
         String url = session.getUri().toString();
         System.out.println(url);
@@ -118,6 +131,7 @@ public class SocketHandler extends TextWebSocketHandler {
                 rls.get(i).remove(session.getId());
             }
         }
+        log.info("세션 종료");
         super.afterConnectionClosed(session, status);
     }
 
