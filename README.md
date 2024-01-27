@@ -133,3 +133,19 @@
 
 </div>
 
+---
+
+<br>
+
+
+# 팀 구성
+
+
+>## Backend 및 Database : 고경민
+       
+>## Frontend : 이지호
+       
+>## Mobile Frontend : 박영민
+
+
+
