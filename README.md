@@ -37,7 +37,7 @@
 
 <br><br>
 
-## 3.기능 설계
+## 3.기능 설계 및 진척사항
 
 
 ### 3-1. 메인 페이지
@@ -54,6 +54,9 @@
  ![구성3](https://private-user-images.githubusercontent.com/50188319/281679503-764dc9a4-fbb3-4b7f-a3c7-790b6d0c372f.PNG?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDYzNDAwOTQsIm5iZiI6MTcwNjMzOTc5NCwicGF0aCI6Ii81MDE4ODMxOS8yODE2Nzk1MDMtNzY0ZGM5YTQtZmJiMy00YjdmLWEzYzctNzkwYjZkMGMzNzJmLlBORz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAxMjclMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMTI3VDA3MTYzNFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWRkZDVhMDk0OWJlZjYxNWVmZjYwYmFkNGJlMzIwMWNjYTg5MjM4M2ZmMGNiMWM5MWI5ZjQ0YzU0OTZkZjVmMmYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.gmN2zQw4zL_WRaKscFgI8gNPKu37sZFxEkjybh1UFkc)
 
 <br><br>
+
+## 진척 사항 
+![진척](https://github.com/focandlol/gathering/assets/50188319/27779099-36bc-4e22-b70c-20d30ccc5207)
 
 ## 4.ERD
 
