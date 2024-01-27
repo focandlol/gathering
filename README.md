@@ -1,3 +1,7 @@
+![세모](https://private-user-images.githubusercontent.com/50188319/281732629-41a23c0d-8be3-4ea8-be22-6f1c8d328a1b.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDYzNDIwMTYsIm5iZiI6MTcwNjM0MTcxNiwicGF0aCI6Ii81MDE4ODMxOS8yODE3MzI2MjktNDFhMjNjMGQtOGJlMy00ZWE4LWJlMjItNmYxYzhkMzI4YTFiLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAxMjclMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMTI3VDA3NDgzNlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWQ3NDkxMjcwYzg4NDI5NjBlNGY3Mzg4OTAyMjViNmJmMDE4MGE5NzUyNDNkOThlOTU2ZWRkYWM3YjM0YWYzY2UmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0._gKTEWYciyNfilHd7VBleAMC6saNEyiakJr4M3CgDSI)
+
+<br>
+
 # 프로젝트 개요
 
 최근 코로나19가 종식되고 모임이 활성화됨에 따라 사용자들이 더 쉽게 모임을 생성 및 참여할 수 있게 도와주고자 함. 회원 가입 및 로그인, 프로필, 번개 모임(순간적인 모임) 및 동호회(지속적인 모임) 생성 및 참여, 채팅방, 번개 게시판, 동호회 게시판 등의 기능을 구현하여 사용자들이 효율적으로 모임을 생성 및 운영하고 참여할 수 있는 환경을 제공하는 것을 목표로 함. 또한 매너등급 시스템, 호스트의 초대를 통한 참여 기능과 피드백 기능을 통해 모임이 파투 날 확률을 줄이고 사용자에게 깨끗한 모임 환경을 제공.
