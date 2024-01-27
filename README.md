@@ -6,6 +6,10 @@
 
 최근 코로나19가 종식되고 모임이 활성화됨에 따라 사용자들이 더 쉽게 모임을 생성 및 참여할 수 있게 도와주고자 함. 회원 가입 및 로그인, 프로필, 번개 모임(순간적인 모임) 및 동호회(지속적인 모임) 생성 및 참여, 채팅방, 번개 게시판, 동호회 게시판 등의 기능을 구현하여 사용자들이 효율적으로 모임을 생성 및 운영하고 참여할 수 있는 환경을 제공하는 것을 목표로 함. 또한 매너등급 시스템, 호스트의 초대를 통한 참여 기능과 피드백 기능을 통해 모임이 파투 날 확률을 줄이고 사용자에게 깨끗한 모임 환경을 제공.
 
+---
+
+<br>
+
 # 시스템 설계
 
 ## 1.기능 설명
@@ -59,13 +63,19 @@
 
 <br><br>
 
-## 진척 사항 
+### 진척 사항 
 ![진척](https://github.com/focandlol/gathering/assets/50188319/27779099-36bc-4e22-b70c-20d30ccc5207)
 
 ## 4.ERD
 
 
  ![erd](https://private-user-images.githubusercontent.com/50188319/281728312-593d4fce-3d18-46c8-bb83-4363a1f1403b.PNG?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDYzNDAyNTgsIm5iZiI6MTcwNjMzOTk1OCwicGF0aCI6Ii81MDE4ODMxOS8yODE3MjgzMTItNTkzZDRmY2UtM2QxOC00NmM4LWJiODMtNDM2M2ExZjE0MDNiLlBORz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAxMjclMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMTI3VDA3MTkxOFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTYwZjRlNWZmYTQ3MWUxZGI1NDU2ZDFhYmFkZTQ4OWJjMGJiYzZjOGJmNzYxZDgyYjYwNzRkNWZhYTA1MzliMzYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.pt6w1xEVI1HOyvOfjBLmneuXFbYOTncWS4-YLV72uzs)
+
+<br>
+
+---
+
+<br>
 
 # Overview
 
