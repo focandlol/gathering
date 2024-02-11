@@ -13,7 +13,12 @@
 # 시스템 설계
 
 ## 1.기능 설명
+
+<div align="center">
+   
 ![image](https://github.com/focandlol/gathering/assets/50188319/508c3ba4-bc03-4bb9-bde1-9457a2d71899)
+
+</div>
 
 ⚫ 회원가입 : 카카오 주소 찾기 Api를 활용한 주소입력 구현, java mail sender와 ajax를 활용한 이메일 인증 구현
 
